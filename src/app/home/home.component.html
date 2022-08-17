@@ -1,19 +1,11 @@
 <div class="container">
-  <!-- <tui-notification>
-    A short simple informative message. It can be&nbsp;multiline&nbsp;if&nbsp;you&nbsp;need it
-  </tui-notification>
-  <tui-notification status="success" class="tui-space_top-4">
-    A short simple informative message. It can be&nbsp;multiline&nbsp;if&nbsp;you&nbsp;need it
-  </tui-notification>
-  <tui-notification status="error" class="tui-space_top-4">
-    A short simple informative message. It can be&nbsp;multiline&nbsp;if&nbsp;you&nbsp;need it
-  </tui-notification>
-  <tui-notification status="warning" class="tui-space_top-4">
-    A short simple informative message. It can be&nbsp;multiline&nbsp;if&nbsp;you&nbsp;need it
-  </tui-notification> -->
-  <div tuiGroup *ngFor="let class of classes | keyvalue" class="group" [collapsed]="true">
+
+</div>
+
+<div class="tui-row tui-row_adaptive tui-row_example tui-row_align_center">
+  <div *ngFor="let class of classes | keyvalue" class="group tui-col_md-4 tui-col_lg-4" [collapsed]="true">
     <tui-avatar text={{class.key}} class="tui-space_top-1" [autoColor]="true" [avatarUrl]="getClassAvatar(class.key)">
     </tui-avatar>
-    <tui-tag *ngFor="let skill of getSkills(class.key)" value={{skill.name}}></tui-tag>
+    <img *ngFor="let skill of getSkills(class.key)" [src]="getSkillImage(skill.id)"/>
   </div>
 </div>
