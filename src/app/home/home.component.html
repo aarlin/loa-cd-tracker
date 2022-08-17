@@ -6,6 +6,7 @@
   <div *ngFor="let class of classes | keyvalue" class="group tui-col_md-4 tui-col_lg-4" [collapsed]="true">
     <tui-avatar text={{class.key}} class="tui-space_top-1" [autoColor]="true" [avatarUrl]="getClassAvatar(class.key)">
     </tui-avatar>
-    <img *ngFor="let skill of getSkills(class.key)" [src]="getSkillImage(skill.id)"/>
+    <tui-avatar *ngFor="let skill of getSkills(class.key)" class="tui-space_top-1" [avatarUrl]="getSkillImage(skill.id)"></tui-avatar>
+
   </div>
 </div>

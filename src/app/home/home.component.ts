@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 import { classes } from '../../constants/classes';
 import { skills } from '../../constants/skills';
+import { singleClass } from '../../constants/singleClass';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,8 @@ import { skills } from '../../constants/skills';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  classes = classes;
+  // classes = classes
+  classes = singleClass;
   testForm = new FormGroup({
     testValue: new FormControl(`orange`),
   });
