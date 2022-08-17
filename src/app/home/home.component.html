@@ -1,7 +1,12 @@
 <div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
 
-  <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+</div>
+
+<div class="tui-row tui-row_adaptive tui-row_example tui-row_align_center">
+  <div *ngFor="let class of classes | keyvalue" class="group tui-col_md-4 tui-col_lg-4" [collapsed]="true">
+    <tui-avatar text={{class.key}} class="tui-space_top-1" [autoColor]="true" [avatarUrl]="getClassAvatar(class.key)">
+    </tui-avatar>
+    <tui-avatar *ngFor="let skill of getSkills(class.key)" class="tui-space_top-1" [avatarUrl]="getSkillImage(skill.id)"></tui-avatar>
+
+  </div>
 </div>
