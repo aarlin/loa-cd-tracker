@@ -9,8 +9,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TuiRootModule, TuiNotificationModule, TuiDialogModule, TuiAlertModule, TuiGroupModule } from '@taiga-ui/core';
 import { TuiAvatarModule, TuiTagModule } from '@taiga-ui/kit';
 
-
-
 @NgModule({
   declarations: [HomeComponent],
   imports: [CommonModule, SharedModule, 
