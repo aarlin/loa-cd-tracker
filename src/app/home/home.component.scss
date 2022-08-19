@@ -1,6 +1,36 @@
-@import '~@taiga-ui/core/styles/taiga-ui-local';
+@import "~@taiga-ui/core/styles/taiga-ui-local";
 
 :host {
-  
 }
 
+.skill {
+    position: relative;
+    border: 1px solid #36393e;
+    border-radius: 5%;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+/* Prevents you from clicked the button multiple times */
+.skill.disabled {
+    pointer-events: none;
+}
+
+/* Makes sure we click the skill not anything in it */
+.skill > * {
+    pointer-events: none;
+}
+
+.skill::before {
+    content: "";
+    // background: conic-gradient(rgba(0, 0, 0, 0.7) var(--time-left), rgba(0, 0, 0, 0.1) var(--time-left));
+    position: absolute;
+    opacity: 0.8;
+    top: 0;
+    left: 0p;
+    height: 100%;
+    width: 100%;
+}
