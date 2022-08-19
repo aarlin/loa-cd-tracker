@@ -12,9 +12,9 @@ export class CooldownDirective {
   // Cooldowns per skill in milliseconds
   COOLDOWN_MAP = new Map([
     ['Moon Flash Kick', 22000],
-    ['jump', 2000],
-    ['crawl', 3000],
-    ['slide', 4000],
+    ['Energy Combustion', 36000],
+    ['Lightning Kick', 9000],
+    ['Charging Steps', 6000],
     ['tumble', 5000],
   ]);
 
@@ -35,6 +35,7 @@ export class CooldownDirective {
     // Exit if we click on anything that isn't a skill
     if(!target.classList.contains(this.SKILL_CLASS)) return;
     
+    target.classList.remove("animate__animated", "animate__flash");
     target.classList.add(this.DISABLED_CLASS);
     
     // Get cooldown time
@@ -56,7 +57,7 @@ export class CooldownDirective {
         target.textContent = '';
         target.style = '';
         target.classList.remove(this.DISABLED_CLASS);
-        target.classList.add("animate__animated", "animate__headShake");
+        target.classList.add("animate__animated", "animate__flash");
         
         clearInterval(intervalID);
       }

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 import { classes } from '../../constants/classes';
 import { skills } from '../../constants/skills';
-import { singleClass } from '../../constants/singleClass';
+import { singleClass } from '../../constants/enabledClasses';
 
 @Component({
   selector: 'app-home',

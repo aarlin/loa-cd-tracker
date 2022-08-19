@@ -1679,7 +1679,7 @@ export const skills = [
         id: 22190,
         name: "Moon Flash Kick",
         class: "Wardancer",
-        level: 0,
+        level: 0
     },
     {
         id: 22170,
