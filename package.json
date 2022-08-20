@@ -32,6 +32,7 @@
     "@taiga-ui/kit": "^2.60.0",
     "@tauri-apps/api": "1.0.0-rc.2",
     "@tinkoff/ng-dompurify": "3.0.0",
+    "animate.css": "4.1.1",
     "dompurify": "2.2.9",
     "rxjs": "7.5.0",
     "tslib": "^2.1.0",
