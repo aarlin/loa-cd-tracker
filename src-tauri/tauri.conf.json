@@ -54,11 +54,24 @@
     },
     "windows": [
       {
-        "title": "Angular Tauri",
-        "width": 800,
-        "height": 600,
+        "label": "team",
+        "title": "Team Cooldown",
+        "width": 480,
+        "height": 210,
         "resizable": true,
-        "fullscreen": false
+        "fullscreen": false,
+        "transparent": true,
+        "alwaysOnTop": true
+      },
+      {
+        "label": "enemy",
+        "title": "Enemy Cooldown",
+        "width": 480,
+        "height": 210,
+        "resizable": true,
+        "fullscreen": false,
+        "transparent": true,
+        "alwaysOnTop": true
       }
     ],
     "security": {
