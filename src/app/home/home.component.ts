@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
   enabledClasses = ['Wardancer'];
 
   selectedWindow = appWindow.label;
+  selectedWindowTitle = appWindow.title;
   windowMap = {
     [appWindow.label]: appWindow
   }
