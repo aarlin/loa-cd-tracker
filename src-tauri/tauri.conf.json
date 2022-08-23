@@ -56,22 +56,24 @@
       {
         "label": "team",
         "title": "Team Cooldown",
-        "width": 480,
-        "height": 210,
-        "resizable": true,
+        "width": 610,
+        "height": 250,
+        "resizable": false,
         "fullscreen": false,
-        "transparent": true,
-        "alwaysOnTop": true
+        "alwaysOnTop": true,
+        "decorations": false,
+        "transparent": true
       },
       {
         "label": "enemy",
         "title": "Enemy Cooldown",
-        "width": 480,
-        "height": 210,
-        "resizable": true,
+        "width": 610,
+        "height": 250,
+        "resizable": false,
         "fullscreen": false,
-        "transparent": true,
-        "alwaysOnTop": true
+        "alwaysOnTop": true,
+        "decorations": false,
+        "transparent": true
       }
     ],
     "security": {

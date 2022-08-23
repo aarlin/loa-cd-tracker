@@ -1,4 +1,7 @@
 @import "~@taiga-ui/core/styles/taiga-ui-local";
+$white: rgb(255, 255, 255);
+$blue: rgb(49, 109, 246);
+$grey: #2f3940;
 
 :host {
 }
@@ -43,6 +46,57 @@
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
-.tui-container {
-    margin-left: -1rem;
-} 
+.container {
+    // background: rgba(29,29,29,255);
+    // background-color: rgba(29,29,29, 0.5)
+}
+
+.icons8 {
+    margin-bottom: 1.5rem;
+
+    &-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &-label {
+        font-weight: bold;
+        display: inline-block;
+        padding: 0.25rem 0.625rem;
+        color: #fff;
+        border-radius: 0.25rem;
+
+        &-violet {
+            background: $white;
+        }
+
+        &-blue {
+            background: $blue;
+        }
+    }
+
+    &-white {
+        color: $white;
+    }
+
+    &-blue {
+        color: $blue;
+    }
+
+    &-grey {
+        color: $grey;
+    }
+}
+
+.cooldown-row {
+    margin-left: 1.5rem;
+}
+
+.titlebar-window-name {
+    color: var(--tui-text-01-night)
+}
+
+.titlebar {
+    outline: 30px;
+    outline-color: var(--tui-text-01-night)
+}

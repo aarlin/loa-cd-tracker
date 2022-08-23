@@ -7,10 +7,11 @@ import { PageNotFoundComponent } from './components/';
 import { WebviewDirective } from './directives/';
 import { FormsModule } from '@angular/forms';
 import { CooldownDirective } from './directives/cooldown/cooldown.directive';
+import { TitlebarComponent } from './components/titlebar/titlebar.component';
 
 @NgModule({
-  declarations: [PageNotFoundComponent, WebviewDirective, CooldownDirective],
+  declarations: [PageNotFoundComponent, WebviewDirective, CooldownDirective, TitlebarComponent],
   imports: [CommonModule, TranslateModule, FormsModule],
-  exports: [TranslateModule, WebviewDirective, CooldownDirective, FormsModule]
+  exports: [TranslateModule, WebviewDirective, CooldownDirective, FormsModule, TitlebarComponent]
 })
 export class SharedModule {}

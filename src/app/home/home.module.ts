@@ -6,7 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TuiRootModule, TuiNotificationModule, TuiDialogModule, TuiAlertModule, TuiGroupModule } from '@taiga-ui/core';
+import { TuiRootModule, TuiNotificationModule, TuiDialogModule, TuiAlertModule, TuiGroupModule, TuiSvgModule, TuiTooltipModule, TuiHintModule } from '@taiga-ui/core';
 import { TuiAvatarModule, TuiTagModule } from '@taiga-ui/kit';
 
 @NgModule({
@@ -16,6 +16,7 @@ import { TuiAvatarModule, TuiTagModule } from '@taiga-ui/kit';
     ReactiveFormsModule, TuiRootModule, 
     TuiNotificationModule, TuiGroupModule,
     TuiDialogModule, TuiAvatarModule,
-    TuiAlertModule, TuiTagModule]
+    TuiAlertModule, TuiTagModule,
+    TuiSvgModule, TuiTooltipModule, TuiHintModule]
 })
 export class HomeModule { }
