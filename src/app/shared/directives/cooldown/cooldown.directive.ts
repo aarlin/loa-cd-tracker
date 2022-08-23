@@ -19,9 +19,7 @@ export class CooldownDirective {
   ]);
 
 
-  constructor(private el: ElementRef) {
-    console.log(this.el.nativeElement.src);
-  }
+  constructor(private el: ElementRef) { }
 
   @HostListener('click', ['$event'])
   onClick(e: any) {

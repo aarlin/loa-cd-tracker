@@ -4,6 +4,14 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { classes } from '../../constants/classes';
 import { skills } from '../../constants/skills';
 import { singleClass } from '../../constants/enabledClasses';
+import {
+  appWindow,
+  WebviewWindow,
+  LogicalSize,
+  UserAttentionType,
+  PhysicalSize,
+  PhysicalPosition
+} from '@tauri-apps/api/window';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +27,11 @@ export class HomeComponent implements OnInit {
   tag = 'hello';
   enabledClasses = ['Wardancer'];
 
+  selectedWindow = appWindow.label;
+  windowMap = {
+    [appWindow.label]: appWindow
+  }
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -33,9 +46,9 @@ export class HomeComponent implements OnInit {
   }
 
   public getSkills(className: string): any[] {
-    return skills.filter(skill => skill.class === className);
+    const classSkills = skills.filter(skill => skill.class === className);
+    return classSkills.slice(0, 11);
   }
-
 
   public getSkillImage(id: number, className?: string): any {
     if (className && this.enabledClasses.includes(className)) {
@@ -86,6 +99,22 @@ export class HomeComponent implements OnInit {
 
   public getSkill(id: any) {
     return skills.find((k) => k.id == id);
+  }
+  
+  public menuItem() {
+    console.log('ok');
+  }
+
+  public minimizeWindow() {
+    this.windowMap[this.selectedWindow].minimize()
+  }
+
+  public closeWindow() {
+    this.windowMap[this.selectedWindow].close()
+  }
+
+  public async startDrag() {
+    await appWindow.startDragging();
   }
 
 }
