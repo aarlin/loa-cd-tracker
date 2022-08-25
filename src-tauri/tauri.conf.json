@@ -21,20 +21,18 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "resources": [],
-      "externalBin": [],
+      "resources": ["assets/*"],
+      "externalBin": ["assets/ae92984b-6f1b-4b0d-ad31-504e1905d5e6"],
       "copyright": "",
       "category": "DeveloperTool",
       "shortDescription": "",
       "longDescription": "",
       "deb": {
-        "depends": [],
-        "useBootstrapper": false
+        "depends": []
       },
       "macOS": {
         "frameworks": [],
         "minimumSystemVersion": "",
-        "useBootstrapper": false,
         "exceptionDomain": "",
         "signingIdentity": null,
         "providerShortName": null,
@@ -54,7 +52,6 @@
     },
     "windows": [
       {
-        "label": "team",
         "title": "Team Cooldown",
         "width": 610,
         "height": 250,

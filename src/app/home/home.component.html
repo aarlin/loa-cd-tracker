@@ -1,15 +1,15 @@
-<div class="container tui-container tui-container_adaptive">
+<div data-tauri-drag-region class="container tui-container tui-container_adaptive">
   <div data-tauri-drag-region class="tui-row tui-row_adaptive titlebar">
-    <div class="titlebar-window-name titlebar tui-col_xs-12 tui-col_md-2 tui-col_lg-3">{{selectedWindow | uppercase}} COOLDOWN TRACKER</div>
-    <div class="tui-col_xs-12 tui-col_md-2 tui-col_lg-3"></div>
-    <div class="tui-col_xs-12 tui-col_md-2 tui-col_lg-3 tui-col-offset_md-7 tui-col-offset_lg-5">
-      <tui-svg tuiHintId="love" tuiHintMode="onDark" tuiHintDirection="top-middle" [tuiHint]="tooltip"
-        (click)="minimizeWindow()" src="tuiIconMinus" class="icons8-icon icons8-grey"></tui-svg>
+    <div class="titlebar-window-name titlebar tui-col_xs-11 tui-col_md-2">
+      <div data-tauri-drag-region>{{selectedWindowTitle | uppercase}} COOLDOWN TRACKER</div>
+    </div>
+    <div class="tui-row_align_end tui-col_xs-1">
+        <tui-svg tuiHintId="love" tuiHintMode="onDark" tuiHintDirection="top-middle"
+          (click)="minimizeWindow()" src="tuiIconMinus" class="icons8-icon icons8-grey"></tui-svg>
     </div>
   </div>
 
-
-  <div class="tui-row tui-row_adaptive tui-row_example tui-row_align_center cooldown-row">
+  <div data-tauri-drag-region class="tui-row tui-row_adaptive tui-row_example tui-row_align_center cooldown-row">
     <div *ngFor="let class of classes | keyvalue" tuiGroup class="group">
       <tui-avatar tabindex="0" text={{class.key}} class="tui-space_top-1" [autoColor]="true"
         [avatarUrl]="getClassAvatar(class.key)">
@@ -24,27 +24,3 @@
     </div>
   </div>
 </div>
-
-<!-- 
-
-  <div class="container tui-container tui-container_adaptive">
-  <div class="tui-row tui-row_adaptive">
-    <app-titlebar></app-titlebar>
-  </div>
-
-
-  <div class="cooldown-container">
-    <div *ngFor="let class of classes | keyvalue" tuiGroup class="group">
-      <tui-avatar tabindex="0" text={{class.key}} class="tui-space_top-1" [autoColor]="true"
-        [avatarUrl]="getClassAvatar(class.key)">
-      </tui-avatar>
-      <div *ngFor="let skill of getSkills(class.key)">
-        <img cooldown attr.data-skill={{skill.name}} class="tui-space_top-1 skill"
-          [src]="getSkillImage(skill.id, class.key)" />
-        <div class="cooldown">22</div>
-      </div>
-
-    </div>
-  </div>
-</div>
- -->
