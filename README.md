@@ -17,7 +17,7 @@ Bootstrap and package your project with Angular 13 (Typescript + SASS + Hot Relo
 Currently runs with:
 
 - Angular v13.2.4
-- Tauri 1.0.0-rc.2
+- Tauri 1.0.4
 
 With this sample, you can:
 
@@ -56,10 +56,15 @@ npm install -g @angular/cli
 
 - **in a terminal window** -> npm start
 
-Voila! You can use your Angular + Tauri app in a local development environment with hot reload!
-
 The application code is managed by `src-tauri/main.rs`. \ 
 In this sample, the app runs with a simple Angular App (http://localhost:4200), and a webView managed by Tauri.
+
+1. Download and replace `dps.exe` inside `src-tauri/assets` from [LostArkLogger releases](https://github.com/shalzuth/LostArkLogger/releases) if outdated  
+2. Open up terminal as admin   
+3. Open up Lost Ark  
+4. `npm run tauri:serve`  
+  
+
 
 ## Project structure
 

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { APP_CONFIG } from '../environments/environment';
 import {TauriService} from './core/services';
+import { HttpBridgeService } from './shared/services/http-bridge.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import {TauriService} from './core/services';
 export class AppComponent {
   constructor(
     private tauriService: TauriService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private httpBridgeService: HttpBridgeService
   ) {
     this.translate.setDefaultLang('en');
     console.log('APP_CONFIG', APP_CONFIG);
@@ -22,5 +24,8 @@ export class AppComponent {
     } else {
       console.log('Run in browser');
     }
+
+    // console.log('setupBridge')
+    // this.httpBridgeService.setupBridge();
   }
 }

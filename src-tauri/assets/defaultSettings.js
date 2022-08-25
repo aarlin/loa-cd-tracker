@@ -1,10 +1,10 @@
-export const defaultSettings = {
+const defaultSettings = {
     appVersion: "",
     general: {
         startMainHidden: false,
         startMainMinimized: false,
         closeToSystemTray: true,
-        useWinpcap: false,
+        useWinpcap: true,
         saveScreenshots: true,
         server: "steam",
         customLogPath: null,
@@ -132,3 +132,5 @@ export const defaultSettings = {
         splitOnPhaseTransition: true,
     },
 };
+
+module.exports = defaultSettings;

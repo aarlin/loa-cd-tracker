@@ -1,12 +1,12 @@
-import { createServer } from "http";
-import { EventEmitter } from "events";
-import { spawn } from "child_process";
-import fs from "fs";
+const http = require('http');
+const EventEmitter = require('events');
+const { spawn } = require('child_process');
+const fs = require('fs');
 // import log from "electron-log";
-import path from "path";
-import { defaultSettings } from './defaultSettings';
+const path = require('path');
+const execFile = require('child_process').execFile;
 
-export const httpServerEventEmitter = new EventEmitter();
+const httpServerEventEmitter = new EventEmitter();
 
 let httpServer;
 let packetCapturerProcess;
@@ -17,11 +17,11 @@ function checkHost(requestHost) {
   return validHosts.includes(requestHost);
 }
 
-export function setupBridge(appSettings) {
-  httpServer = createServer((req, res) => {
+function setupBridge(appSettings) {
+  httpServer = http.createServer((req, res) => {
     const isHostValid = checkHost(req.headers.host);
     if (!isHostValid) {
-    //   log.info("Request from invalid host: " + req.headers.host);
+      console.info("Request from invalid host: " + req.headers.host);
       res.writeHead(403, { "Content-Type": "text/html" });
       return res.end("Forbidden");
     }
@@ -31,6 +31,7 @@ export function setupBridge(appSettings) {
       let body = [];
 
       req.on("data", (chunk) => {
+        console.info("Data chunk: ", chunk);
         body.push(chunk);
       });
 
@@ -45,7 +46,7 @@ export function setupBridge(appSettings) {
   });
 
   httpServer.listen(0, "localhost", () => {
-    // log.info(`Server listening on port ${httpServer.address().port}`);
+    console.info(`Server listening on port ${httpServer.address().port}`);
     validHosts.push(
       `localhost:${httpServer.address().port}`,
       `127.0.0.1:${httpServer.address().port}`
@@ -71,39 +72,72 @@ function spawnPacketCapturer(appSettings, serverPort) {
   try {
     let binaryFolder;
     if (process.env.DEBUGGING) {
-      binaryFolder = path.resolve(__dirname, "../../binary/");
+      binaryFolder = path.resolve(__dirname, "../../assets");
     } else {
-      binaryFolder = path.resolve("./binary/");
+      binaryFolder = path.resolve("./assets");
     }
 
     const binaryFiles = fs.readdirSync(binaryFolder);
     for (const binaryFile of binaryFiles) {
-      if (binaryFile.endsWith(".exe")) {
-        packetCapturerProcess = spawn(
-          path.resolve(binaryFolder, binaryFile),
-          args
-        );
+      if (binaryFile.endsWith("dps.exe")) {
+        // const adminRunAs = `runas /user:"DESKTOP-CQJECP9\\Aaron" `;
+        // console.log(adminRunAs + path.resolve(binaryFolder, binaryFile));
+        // packetCapturerProcess = spawn(adminRunAs + path.resolve(binaryFolder, binaryFile), args);
+        packetCapturerProcess = spawn(path.resolve(binaryFolder, binaryFile), args);
         break;
       }
     }
 
-    // log.info("Started Logger!");
+    console.info("Started Logger!");
   } catch (e) {
-    // log.error("Error while trying to open packet capturer: " + e);
+    console.error("Error while trying to open packet capturer: " + e);
 
-    // log.info("Exiting app...");
+    console.info("Exiting app...");
   }
 
   packetCapturerProcess.on("exit", function (code, signal) {
+    console.log(code, signal);
     if (code === 10) return;
 
-    // log.error(
-    //   `The connection to the Lost Ark Packet Capture was lost for some reason:\n
-    //   Code: ${code} and Signal: ${signal}`
-    // );
+    console.error(
+      `The connection to the Lost Ark Packet Capture was lost for some reason:\n
+      Code: ${code} and Signal: ${signal}`
+    );
 
-    // log.info("Exiting app...");
+    console.info("Exiting app...");
+  });
+
+  packetCapturerProcess.stdout.on('data', function (data) {
+    console.log("IM HERE stdout on data");
+    console.log('data' + data);
+  });
+  packetCapturerProcess.stderr.on('data', function (data) {
+    console.log("IM HERE stderr on data");
+    console.log('test: ' + data);
+    console.error(data);
+  });
+  packetCapturerProcess.on('close', function (code) {
+    console.log("IM HERE on close");
+    console.log("close");
+  });
+  packetCapturerProcess.on('error', function (err) {
+    console.log("IM HERE on error");
+    console.log(err);
+  });
+  packetCapturerProcess.stderr.on('error', function (err) {
+    console.log("IM HERE");
+    console.log("my Erorr");
+    process.stderr.emit('error', err);
+  });
+
+  packetCapturerProcess.stdout.on('data', function (buf) {
+    console.log("IM HERE");
+    console.log('buf receive');
+    console.log(buf.toString());
   });
 }
 
-setupBridge(defaultSettings);
+module.exports = {
+  httpServerEventEmitter,
+  setupBridge
+}
