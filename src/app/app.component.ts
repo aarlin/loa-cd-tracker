@@ -26,6 +26,6 @@ export class AppComponent {
     }
 
     // console.log('setupBridge')
-    // this.httpBridgeService.setupBridge();
+    this.httpBridgeService.setupListener();
   }
 }

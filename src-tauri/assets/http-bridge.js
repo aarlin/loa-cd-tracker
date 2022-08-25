@@ -4,7 +4,6 @@ const { spawn } = require('child_process');
 const fs = require('fs');
 // import log from "electron-log";
 const path = require('path');
-const execFile = require('child_process').execFile;
 
 const httpServerEventEmitter = new EventEmitter();
 
@@ -31,7 +30,6 @@ function setupBridge(appSettings) {
       let body = [];
 
       req.on("data", (chunk) => {
-        console.info("Data chunk: ", chunk);
         body.push(chunk);
       });
 
@@ -80,9 +78,6 @@ function spawnPacketCapturer(appSettings, serverPort) {
     const binaryFiles = fs.readdirSync(binaryFolder);
     for (const binaryFile of binaryFiles) {
       if (binaryFile.endsWith("dps.exe")) {
-        // const adminRunAs = `runas /user:"DESKTOP-CQJECP9\\Aaron" `;
-        // console.log(adminRunAs + path.resolve(binaryFolder, binaryFile));
-        // packetCapturerProcess = spawn(adminRunAs + path.resolve(binaryFolder, binaryFile), args);
         packetCapturerProcess = spawn(path.resolve(binaryFolder, binaryFile), args);
         break;
       }
@@ -96,7 +91,6 @@ function spawnPacketCapturer(appSettings, serverPort) {
   }
 
   packetCapturerProcess.on("exit", function (code, signal) {
-    console.log(code, signal);
     if (code === 10) return;
 
     console.error(
@@ -107,34 +101,34 @@ function spawnPacketCapturer(appSettings, serverPort) {
     console.info("Exiting app...");
   });
 
-  packetCapturerProcess.stdout.on('data', function (data) {
-    console.log("IM HERE stdout on data");
-    console.log('data' + data);
-  });
-  packetCapturerProcess.stderr.on('data', function (data) {
-    console.log("IM HERE stderr on data");
-    console.log('test: ' + data);
-    console.error(data);
-  });
-  packetCapturerProcess.on('close', function (code) {
-    console.log("IM HERE on close");
-    console.log("close");
-  });
-  packetCapturerProcess.on('error', function (err) {
-    console.log("IM HERE on error");
-    console.log(err);
-  });
-  packetCapturerProcess.stderr.on('error', function (err) {
-    console.log("IM HERE");
-    console.log("my Erorr");
-    process.stderr.emit('error', err);
-  });
+  // packetCapturerProcess.stdout.on('data', function (data) {
+  //   console.log("IM HERE stdout on data");
+  //   console.log('data' + data);
+  // });
+  // packetCapturerProcess.stderr.on('data', function (data) {
+  //   console.log("IM HERE stderr on data");
+  //   console.log('test: ' + data);
+  //   console.error(data);
+  // });
+  // packetCapturerProcess.on('close', function (code) {
+  //   console.log("IM HERE on close");
+  //   console.log("close");
+  // });
+  // packetCapturerProcess.on('error', function (err) {
+  //   console.log("IM HERE on error");
+  //   console.log(err);
+  // });
+  // packetCapturerProcess.stderr.on('error', function (err) {
+  //   console.log("IM HERE");
+  //   console.log("my Erorr");
+  //   process.stderr.emit('error', err);
+  // });
 
-  packetCapturerProcess.stdout.on('data', function (buf) {
-    console.log("IM HERE");
-    console.log('buf receive');
-    console.log(buf.toString());
-  });
+  // packetCapturerProcess.stdout.on('data', function (buf) {
+  //   console.log("IM HERE");
+  //   console.log('buf receive');
+  //   console.log(buf.toString());
+  // });
 }
 
 module.exports = {

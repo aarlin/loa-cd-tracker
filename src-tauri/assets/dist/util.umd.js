@@ -1,0 +1,2 @@
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e||self).loaDetailsLogParser={})}(this,function(e){e.tryParseInt=function(e,t,o,n){if(void 0===t&&(t=0),void 0===o&&(o=10),void 0===n&&(n=!1),"number"==typeof e)return isNaN(e)?t:e;var i;try{i=n?parseFloat(e):parseInt(e,o),isNaN(i)&&(i=t)}catch(e){i=t}return i}});
+//# sourceMappingURL=util.umd.js.map

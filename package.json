@@ -34,6 +34,7 @@
     "@tinkoff/ng-dompurify": "3.0.0",
     "animate.css": "4.1.1",
     "dompurify": "2.2.9",
+    "loa-details-log-parser": "1.3.1",
     "rxjs": "7.5.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
