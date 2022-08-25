@@ -1,14 +1,35 @@
 const defaultSettings = require('./defaultSettings');
 const { setupBridge, httpServerEventEmitter } = require('./http-bridge');
-import { LogParser } from "loa-details-log-parser";
+const { LogParser } = require('./dist/parser');
 
 setupBridge(defaultSettings);
 
-httpServerEventEmitter.on("packet", (value) => {
-    // logParser.parseLogLine(value);
-    console.log("Packet received: ", value);
-});
+setupListeners();
 
-httpServerEventEmitter.on("debug", (data) => {
-    log.info("debug:", data);
-});
+function setupListeners() {
+    const logParser = new LogParser((isLive = true));
+    logParser.debugLines = true;
+
+    logParser.dontResetOnZoneChange =
+        defaultSettings?.damageMeter?.functionality?.dontResetOnZoneChange;
+
+    logParser.resetAfterPhaseTransition =
+        defaultSettings?.damageMeter?.functionality?.resetAfterPhaseTransition;
+
+    logParser.removeOverkillDamage =
+        defaultSettings?.damageMeter?.functionality?.removeOverkillDamage;
+
+    logParser.on("log", (val) => {
+        console.log(JSON.stringify(val))
+    });
+
+    httpServerEventEmitter.on("packet", (value) => {
+        logParser.parseLogLine(value);
+        // console.log("Packet received: ", value);
+    });
+
+    httpServerEventEmitter.on("debug", (data) => {
+        // log.info("debug:", data);
+    });
+}
+

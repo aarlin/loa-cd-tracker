@@ -36,7 +36,6 @@ fn main() {
   
           #[allow(clippy::collapsible_match)]
           while let Some(event) = rx.recv().await {
-            println!("{:#?}", event);
             if let CommandEvent::Stdout(line) = event {
               window
                 .emit("message", Some(format!("'{}'", line)))
