@@ -10,17 +10,32 @@
   </div>
 
   <div data-tauri-drag-region class="tui-row tui-row_adaptive tui-row_example tui-row_align_center cooldown-row">
-    <div *ngFor="let class of classes | keyvalue" tuiGroup class="group">
-      <tui-avatar tabindex="0" text={{class.key}} class="tui-space_top-1" [autoColor]="true"
-        [avatarUrl]="getClassAvatar(class.key)">
-      </tui-avatar>
-      <!-- <tui-avatar cooldown *ngFor="let skill of getSkills(class.key)" class="tui-space_top-1" [avatarUrl]="getSkillImage(skill.id, class.key)"></tui-avatar> -->
-      <div *ngFor="let skill of getSkills(class.key)">
-        <img cooldown attr.data-skill={{skill.name}} class="tui-space_top-1 skill"
-          [src]="getSkillImage(skill.id, class.key)" />
-        <div class="cooldown">22</div>
+    <ng-container *ngIf="characters; else noSession">
+      <div *ngFor="let character of characters" tuiGroup class="group">
+        <tui-avatar tabindex="0" text={{character.className}} class="tui-space_top-1" [autoColor]="true"
+          [avatarUrl]="getClassAvatar(character.className)">
+        </tui-avatar>
+        <!-- <tui-avatar cooldown *ngFor="let skill of getSkills(class.key)" class="tui-space_top-1" [avatarUrl]="getSkillImage(skill.id, class.key)"></tui-avatar> -->
+        <!-- <div *ngFor="let skill of character.skill">
+          <img cooldown attr.data-skill={{skill.name}} class="tui-space_top-1 skill"
+            [src]="getSkillImage(skill.id, character.className)" />
+          <div class="cooldown">22</div>
+        </div> -->
+        
+        <div *ngFor="let skill of getSkills(character.className)">
+          <img cooldown attr.data-skill={{skill.name}} class="tui-space_top-1 skill"
+            [src]="getSkillImage(skill.id, character.className)" />
+          <div class="cooldown">22</div>
+        </div>
+                  
+       
+  
       </div>
+    </ng-container>
 
-    </div>
+    <ng-template #noSession>
+      <div> No active session or characters</div>
+    </ng-template>
+
   </div>
 </div>

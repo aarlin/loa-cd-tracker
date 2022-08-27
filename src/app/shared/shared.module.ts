@@ -9,10 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { CooldownDirective } from './directives/cooldown/cooldown.directive';
 import { TitlebarComponent } from './components/titlebar/titlebar.component';
 import { HttpBridgeService } from './services/http-bridge.service';
+import { CharacterStoreService } from './store/character.service';
 
 @NgModule({
   declarations: [PageNotFoundComponent, WebviewDirective, CooldownDirective, TitlebarComponent],
-  providers: [HttpBridgeService],
+  providers: [HttpBridgeService, CharacterStoreService],
   imports: [CommonModule, TranslateModule, FormsModule],
   exports: [TranslateModule, WebviewDirective, CooldownDirective, FormsModule, TitlebarComponent]
 })
