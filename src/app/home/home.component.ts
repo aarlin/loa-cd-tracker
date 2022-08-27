@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 import { classes } from '../../constants/classes';
@@ -12,6 +12,11 @@ import {
   PhysicalSize,
   PhysicalPosition
 } from '@tauri-apps/api/window';
+import { CharacterStoreService } from '../shared/store/character.service';
+import { CharacterFacadeService } from '../shared/store/character-facade.service';
+import { AnyCnameRecord } from 'dns';
+import { CharacterStoreState } from '../shared/models/character.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -19,11 +24,6 @@ import {
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  // classes = classes
-  classes = singleClass;
-  testForm = new FormGroup({
-    testValue: new FormControl(`orange`),
-  });
   tag = 'hello';
   enabledClasses = ['Wardancer'];
 
@@ -32,11 +32,21 @@ export class HomeComponent implements OnInit {
   windowMap = {
     [appWindow.label]: appWindow
   }
+  characters$: Observable<CharacterStoreState> = this.facadeService.getCharacters();
+  characters: any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private facadeService: CharacterFacadeService, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     console.log('HomeComponent INIT');
+    this.facadeService.getCharacters().subscribe(state => {
+      if (state) {
+        this.characters = state.characters;
+        console.log(this.characters);
+        this.cdr.detectChanges();
+      }
+    })
+
   }
 
   public getClassAvatar(className: string): any {
