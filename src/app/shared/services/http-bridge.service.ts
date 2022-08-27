@@ -36,6 +36,7 @@ export class HttpBridgeService {
     switch (messageType) {
       case MessageType.onInitEnv: 
         console.log('onInitEnv');
+        this.resetState();
         break;
       case MessageType.onNewPc:
         console.log('onNewPc');
@@ -57,7 +58,7 @@ export class HttpBridgeService {
       name: characterName,
       classId: classId, 
       className,
-      skills: []
+      skills: Array(10).fill({ name: 'unknown', skillId: 'unknown'})
     };
 
     this.facade.addCharacter(characterToAdd);
@@ -71,6 +72,10 @@ export class HttpBridgeService {
       id: skillId
     }
     this.facade.addSkillToCharacter(skillToAdd, characterName);
+  }
+
+  private resetState() {
+    this.facade.resetState();
   }
 
 }

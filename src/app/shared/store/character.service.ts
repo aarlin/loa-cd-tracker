@@ -40,11 +40,47 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
 
   addSkillToCharacter(skill: Skill, characterName: string) {
     let state = this.getState();
-    const character = state.characters.find(character => character.name === characterName);
+    let character = state.characters.find(character => character.name === characterName);
+    if (!character && characterName === 'You') {
+      this.addSelf();
+    }
+    if (!character) {
+      const character: CharacterItem = {
+        name: characterName,
+        skills: Array(10).fill({ name: 'unknown', id: 'unknown'})
+      }
+      this.add(character);
+    }
     if (character && !character?.skills.find(characterSkill => characterSkill.name === skill.name)) {
-      character?.skills.push(skill);
+      this.addNewSkill(skill, character);
       this.setState({ characters: [...state.characters, character] }, 'ADD_SKILL_TO_CHARACTER');
     }
+  }
+  
+  addSelf() {
+    const self: CharacterItem = {
+      name: 'You',
+      classId: '302',
+      className: 'Wardancer',
+      skills: Array(10).fill({ name: 'unknown', skill: 'unknown'}),
+    }
+    this.add(self);
+  }
 
+  addNewSkill(addedSkill: Skill, character: CharacterItem): void {
+    const unknownSkillIndex = character?.skills.findIndex(skill => skill.name === 'unknown');
+    console.log(unknownSkillIndex);
+    if (unknownSkillIndex >= 0) {
+      character?.skills.splice(unknownSkillIndex, 1);
+    }
+    character?.skills.unshift(addedSkill);
+  }
+
+  resetState() {
+    const initialState: CharacterStoreState = {
+      characters: [],
+      length: 0,
+    };
+    this.setState(initialState, 'INIT_STATE');
   }
 }

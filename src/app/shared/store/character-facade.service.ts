@@ -27,4 +27,8 @@ export class CharacterFacadeService {
   addSkillToCharacter(skill: Skill, characterName: string) {
     this.store.addSkillToCharacter(skill, characterName);
   }
+
+  resetState() {
+    this.store.resetState();
+  }
 }
