@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { CharacterItem, CharacterStoreState } from "../models/character.model";
+import { CharacterItem, CharacterStoreState, Skill } from "../models/character.model";
 import { CharacterStoreService } from "./character.service";
 
 @Injectable({ providedIn: 'root' })
@@ -22,5 +22,9 @@ export class CharacterFacadeService {
 
   removeCharacter(id: number) {
     this.store.removeRow(id);
+  }
+
+  addSkillToCharacter(skill: Skill, characterName: string) {
+    this.store.addSkillToCharacter(skill, characterName);
   }
 }

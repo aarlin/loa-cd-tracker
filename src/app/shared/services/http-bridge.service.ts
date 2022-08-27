@@ -3,7 +3,7 @@ import { Command } from '@tauri-apps/api/shell';
 import { emit, listen } from '@tauri-apps/api/event';
 import { CharacterFacadeService } from '../store/character-facade.service';
 import { message } from '@tauri-apps/api/dialog';
-import { CharacterItem } from '../models/character.model';
+import { CharacterItem, Skill } from '../models/character.model';
 
 interface Payload {
   type: string;
@@ -43,6 +43,7 @@ export class HttpBridgeService {
         break;
       case MessageType.onSkillStart:
         console.log('onSkillStart');
+        this.addSkillToCharacter(messageContent);
         break;
       default:
         break;
@@ -60,6 +61,16 @@ export class HttpBridgeService {
     };
 
     this.facade.addCharacter(characterToAdd);
+  }
+
+  private addSkillToCharacter(messageContent: string) {
+    //onSkillStart: 4AE04E7D, You, 22120, Wind's Whisper"
+    const [logId, characterName, skillId, skillName] = messageContent.split(',').map((content) => content.trim());
+    const skillToAdd: Skill = {
+      name: skillName,
+      id: skillId
+    }
+    this.facade.addSkillToCharacter(skillToAdd, characterName);
   }
 
 }

@@ -24,11 +24,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  // classes = classes
-  classes = singleClass;
-  testForm = new FormGroup({
-    testValue: new FormControl(`orange`),
-  });
   tag = 'hello';
   enabledClasses = ['Wardancer'];
 
@@ -50,7 +45,6 @@ export class HomeComponent implements OnInit {
         console.log(this.characters);
         this.cdr.detectChanges();
       }
-      // this.characters$.next()
     })
 
   }

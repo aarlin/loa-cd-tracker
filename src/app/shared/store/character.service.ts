@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ObservableStore } from '@codewithdan/observable-store';
 import { of } from 'rxjs';
-import { CharacterItem, CharacterStoreState } from '../models/character.model';
+import { CharacterItem, CharacterStoreState, Skill } from '../models/character.model';
 
 @Injectable({ providedIn: 'root' })
 export class CharacterStoreService extends ObservableStore<CharacterStoreState> {
@@ -33,8 +33,18 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
 
   removeRow(id: any) {
     console.log('remove', id);
-    let state = this.getState().characters;
-    state.splice(id, 1);
-    this.setState({ characters: state }, 'REMOVE_CHARACTER_ID');
+    let state = this.getState();
+    state.characters.splice(id, 1);
+    this.setState({ characters: state.characters }, 'REMOVE_CHARACTER_ID');
+  }
+
+  addSkillToCharacter(skill: Skill, characterName: string) {
+    let state = this.getState();
+    const character = state.characters.find(character => character.name === characterName);
+    if (character && !character?.skills.find(characterSkill => characterSkill.name === skill.name)) {
+      character?.skills.push(skill);
+      this.setState({ characters: [...state.characters, character] }, 'ADD_SKILL_TO_CHARACTER');
+    }
+
   }
 }
