@@ -1596,138 +1596,161 @@ export const skills = [
         name: "Esoteric Skill: Lightning Strike",
         class: "Wardancer",
         level: 0,
+        cooldown: 14
     },
     {
         id: 22020,
         name: "Esoteric Skill: Blast Formation",
         class: "Wardancer",
         level: 0,
+        cooldown: 20
     },
     {
         id: 22070,
-        name: "Sleeping Ascent Celebration",
+        name: "Sweeping Hidden Dragon",
         class: "Wardancer",
         level: 0,
+        cooldown: 16
     },
     {
         id: 22060,
         name: "Flash Heat Fang",
         class: "Wardancer",
         level: 0,
+        cooldown: 14
     },
     {
         id: 22080,
         name: "Roar of Courage",
         class: "Wardancer",
         level: 0,
+        cooldown: 25
     },
     {
         id: 22040,
         name: "Esoteric Skill: Rising Fire Dragon",
         class: "Wardancer",
         level: 0,
+        cooldown: 16
     },
     {
         id: 22180,
         name: "Triple Fist",
         class: "Wardancer",
         level: 0,
+        cooldown: 6
     },
     {
         id: 22120,
         name: "Wind's Whisper",
         class: "Wardancer",
         level: 0,
+        cooldown: 30
     },
     {
         id: 22110,
         name: "Esoteric Skill: Call of the Wind God",
         class: "Wardancer",
         level: 0,
+        cooldown: 16
     },
     {
         id: 22090,
         name: "Seismic Strike",
         class: "Wardancer",
         level: 0,
+        cooldown: 16
     },
     {
         id: 22030,
         name: "Esoteric Skill: Spiral Impact",
         class: "Wardancer",
         level: 0,
+        cooldown: 8
     },
     {
         id: 22130,
         name: "Phoenix Advent",
         class: "Wardancer",
         level: 0,
+        cooldown: 18
     },
     {
         id: 22160,
         name: "Sky Shattering Blow",
         class: "Wardancer",
         level: 0,
+        cooldown: 8
     },
     {
         id: 22150,
         name: "Charging Steps",
         class: "Wardancer",
         level: 0,
+        cooldown: 6
     },
     {
         id: 22190,
         name: "Moon Flash Kick",
         class: "Wardancer",
-        level: 0
+        level: 0,
+        cooldown: 22
     },
     {
         id: 22170,
         name: "Lightning Kick",
         class: "Wardancer",
         level: 0,
+        cooldown: 9
     },
     {
         id: 22155,
         name: "Stand Up",
         class: "Wardancer",
         level: 0,
+        cooldown: 30
     },
     {
         id: 22156,
         name: "Stand Up",
         class: "Wardancer",
         level: 0,
+        cooldown: 30
     },
     {
         id: 22280,
         name: "Swift Wind Kick",
         class: "Wardancer",
         level: 0,
+        cooldown: 20
     },
     {
         id: 22290,
         name: "Energy Combustion",
         class: "Wardancer",
         level: 0,
+        cooldown: 36
     },
     {
         id: 22310,
         name: "Ultimate Skill: Flash Rage Blow",
         class: "Wardancer",
         level: 0,
+        cooldown: 300
     },
     {
         id: 22320,
         name: "Sweeping Kick",
         class: "Wardancer",
         level: 0,
+        cooldown: 25
     },
     {
         id: 22330,
         name: "Ultimate Skill: Fist of Dominance",
         class: "Wardancer",
         level: 0,
+        cooldown: 300
     },
     {
         id: 23020,
@@ -2238,144 +2261,168 @@ export const skills = [
         name: "Surprise Attack",
         class: "Deathblade",
         level: 0,
+        cooldown: 5
     },
     {
         id: 25060,
         name: "Upper Slash",
         class: "Deathblade",
         level: 0,
+        cooldown: 8
     },
     {
         id: 25100,
         name: "Blade Dance",
         class: "Deathblade",
         level: 0,
+        cooldown: 18
     },
     {
         id: 25070,
         name: "Earth Cleaver",
         class: "Deathblade",
         level: 0,
+        cooldown: 16
     },
     {
         id: 25080,
         name: "Death Sentence",
         class: "Deathblade",
         level: 0,
+        cooldown: 18
     },
     {
         id: 25090,
         name: "Twin Shadows",
         class: "Deathblade",
         level: 0,
+        cooldown: 12
     },
     {
         id: 25093,
         name: "Twin Shadows",
         class: "Deathblade",
         level: 0,
+        cooldown: 12
     },
     {
         id: 25050,
         name: "Wind Cut",
         class: "Deathblade",
         level: 0,
+        cooldown: 10
     },
     {
         id: 25110,
         name: "Soul Absorber",
         class: "Deathblade",
         level: 0,
+        cooldown: 24
     },
     {
         id: 25120,
         name: "Spincutter",
         class: "Deathblade",
         level: 0,
+        cooldown: 12
     },
     {
         id: 25130,
         name: "Turning Slash",
         class: "Deathblade",
         level: 0,
+        cooldown: 15
     },
     {
         id: 25140,
         name: "Moonlight Sonic",
         class: "Deathblade",
         level: 0,
+        cooldown: 27
     },
     {
         id: 25150,
         name: "Dark Axel",
         class: "Deathblade",
         level: 0,
+        cooldown: 12
     },
     {
         id: 25160,
         name: "Maelstrom",
         class: "Deathblade",
         level: 0,
+        cooldown: 30
     },
     {
         id: 25170,
         name: "Polestar",
         class: "Deathblade",
         level: 0,
+        cooldown: 12
     },
     {
         id: 25180,
         name: "Void Strike",
         class: "Deathblade",
         level: 0,
+        cooldown: 27
     },
     {
         id: 25190,
         name: "Fatal Wave",
         class: "Deathblade",
         level: 0,
+        cooldown: 18
     },
     {
         id: 25200,
         name: "Blitz Rush",
         class: "Deathblade",
         level: 0,
+        cooldown: 24
     },
     {
         id: 25210,
         name: "Head Hunt",
         class: "Deathblade",
         level: 0,
+        cooldown: 18
     },
     {
         id: 25300,
         name: "Flash Blink",
         class: "Deathblade",
         level: 0,
+        cooldown: 300
     },
     {
         id: 25350,
         name: "Blade Assault",
         class: "Deathblade",
         level: 0,
+        cooldown: 300
     },
     {
         id: 25030,
         name: "Death Trance",
         class: "Deathblade",
         level: 0,
+        cooldown: 1
     },
     {
         id: 25031,
         name: "Death Trance",
         class: "Deathblade",
         level: 0,
+        cooldown: 1
     },
     {
         id: 25032,
         name: "Death Trance",
         class: "Deathblade",
         level: 0,
+        cooldown: 1
     },
     {
         id: 25035,
@@ -2383,42 +2430,49 @@ export const skills = [
         display: "Surge",
         class: "Deathblade",
         level: 0,
+        cooldown: 1
     },
     {
         id: 25036,
         name: "Level 2",
         class: "Deathblade",
         level: 0,
+        cooldown: 1
     },
     {
         id: 25037,
         name: "Level 3",
         class: "Deathblade",
         level: 0,
+        cooldown: 1
     },
     {
         id: 25038,
         name: "Zero",
         class: "Deathblade",
         level: 0,
+        cooldown: 1
     },
     {
         id: 25020,
         name: "High-Speed Move",
         class: "Deathblade",
         level: 0,
+        cooldown: 6
     },
     {
         id: 25025,
         name: "Stand Up",
         class: "Deathblade",
         level: 0,
+        cooldown: 30
     },
     {
         id: 27020,
         name: "Rush",
         class: "Shadowhunter",
         level: 0,
+        cooldown: 9
     },
     {
         id: 27800,
@@ -3919,10 +3973,11 @@ export const skills = [
         name: "Esoteric Skill: Blast Formation",
         class: "Striker",
         level: 0,
+        cooldown: 20
     },
     {
         id: 39070,
-        name: "Sleeping Ascent Celebration",
+        name: "Sweeping Hidden Dragon",
         class: "Striker",
         level: 0,
     },
@@ -3931,6 +3986,7 @@ export const skills = [
         name: "Flash Heat Fang",
         class: "Striker",
         level: 0,
+        cooldown: 14
     },
     {
         id: 39180,
@@ -3955,6 +4011,7 @@ export const skills = [
         name: "Phoenix Advent",
         class: "Striker",
         level: 0,
+        cooldown: 18
     },
     {
         id: 39160,
@@ -3979,6 +4036,7 @@ export const skills = [
         name: "Lightning Kick",
         class: "Striker",
         level: 0,
+        cooldown: 9
     },
     {
         id: 39155,
@@ -3997,12 +4055,14 @@ export const skills = [
         name: "Swift Wind Kick",
         class: "Striker",
         level: 0,
+        cooldown: 20
     },
     {
         id: 39320,
         name: "Sweeping Kick",
         class: "Striker",
         level: 0,
+        cooldown: 25
     },
     {
         id: 39080,

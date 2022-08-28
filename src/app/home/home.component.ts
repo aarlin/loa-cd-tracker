@@ -40,9 +40,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     console.log('HomeComponent INIT');
     this.facadeService.getCharacters().subscribe(state => {
+      // console.log(state);
       if (state) {
         this.characters = state.characters;
-        console.log(this.characters);
+        // console.log(this.characters[0].skills);
         this.cdr.detectChanges();
       }
     })
@@ -112,20 +113,12 @@ export class HomeComponent implements OnInit {
     return skills.find((k) => k.id == id);
   }
   
-  public menuItem() {
-    console.log('ok');
-  }
-
   public minimizeWindow() {
     this.windowMap[this.selectedWindow].minimize()
   }
 
-  public closeWindow() {
-    this.windowMap[this.selectedWindow].close()
-  }
-
-  public async startDrag() {
-    await appWindow.startDragging();
+  logEvent(event: any) {
+    console.log(event);
   }
 
 }

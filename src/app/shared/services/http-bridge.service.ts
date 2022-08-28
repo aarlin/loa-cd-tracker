@@ -4,6 +4,7 @@ import { emit, listen } from '@tauri-apps/api/event';
 import { CharacterFacadeService } from '../store/character-facade.service';
 import { message } from '@tauri-apps/api/dialog';
 import { CharacterItem, Skill } from '../models/character.model';
+import { getCooldownBySkillName, getCooldownBySkillId } from '../utils/utils';
 
 interface Payload {
   type: string;
@@ -67,10 +68,13 @@ export class HttpBridgeService {
   private addSkillToCharacter(messageContent: string) {
     //onSkillStart: 4AE04E7D, You, 22120, Wind's Whisper"
     const [logId, characterName, skillId, skillName] = messageContent.split(',').map((content) => content.trim());
+    console.log({logId, characterName, skillId, skillName})
     const skillToAdd: Skill = {
       name: skillName,
-      id: skillId
+      id: skillId,
+      cooldown: getCooldownBySkillId(skillId)
     }
+    // console.log(skillToAdd);
     this.facade.addSkillToCharacter(skillToAdd, characterName);
   }
 

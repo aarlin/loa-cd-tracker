@@ -1,4 +1,5 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { getCooldownBySkillId, getCooldownBySkillName } from '../../utils/utils';
 
 @Directive({
   selector: '[cooldown]'
@@ -8,16 +9,6 @@ export class CooldownDirective {
   UPDATE_INTERVAL = this.SECOND_IN_MS / 60; // Update 60 times per second (60 FPS)
   SKILL_CLASS = 'skill';
   DISABLED_CLASS = 'disabled';
-  
-  // Cooldowns per skill in milliseconds
-  COOLDOWN_MAP = new Map([
-    ['Moon Flash Kick', 22000],
-    ['Energy Combustion', 36000],
-    ['Lightning Kick', 9000],
-    ['Charging Steps', 6000],
-    ['tumble', 5000],
-  ]);
-
 
   constructor(private el: ElementRef) { }
 
@@ -37,13 +28,13 @@ export class CooldownDirective {
     target.classList.add(this.DISABLED_CLASS);
     
     // Get cooldown time
-    const skill = target.dataset.skill;
-    let time = this.COOLDOWN_MAP.get(skill) ?? 0 - this.UPDATE_INTERVAL;
+    const skillId = target.dataset.skillId;
+    let time = getCooldownBySkillId(skillId) * this.SECOND_IN_MS - this.UPDATE_INTERVAL;
     
     // Update remaining cooldown
     const intervalID = setInterval(() => {
       // Pass remaining time in percentage to CSS
-      const passedTime = time / (this.COOLDOWN_MAP.get(skill) ?? 0);
+      const passedTime = time / (getCooldownBySkillId(skillId) * this.SECOND_IN_MS);
       target.style.filter = `grayscale(${passedTime})`;
       
       // Display time left
