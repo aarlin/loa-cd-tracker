@@ -40,9 +40,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     console.log('HomeComponent INIT');
     this.facadeService.getCharacters().subscribe(state => {
+      console.log(state);
       if (state) {
         this.characters = state.characters;
-        console.log(this.characters);
+        // console.log(this.characters[0].skills);
         this.cdr.detectChanges();
       }
     })

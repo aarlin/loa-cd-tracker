@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import { ObservableStore } from '@codewithdan/observable-store';
 import { of, interval } from 'rxjs';
-import { skills } from 'src/constants/skills';
+import { skills } from '../../../constants/skills';
 import { CharacterItem, CharacterStoreState, Skill } from '../models/character.model';
 
 @Injectable({ providedIn: 'root' })
 export class CharacterStoreService extends ObservableStore<CharacterStoreState> {
+  private intervalUpdater: any;
+
   constructor() {
     super({ trackStateHistory: true });
+    this.setInitialState();
   }
 
   setInitialState() {
@@ -20,20 +23,26 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
   }
 
   updateState() {
-    const intervalUpdater = interval(1000).subscribe(event => {
+    this.intervalUpdater = interval(1000).subscribe(event => {
+      // console.log(event);
       let state = this.getState();
-      const updatedCharacterSkillState = state.characters.map((character) => {
-        return { 
-          ...character,
-          skills: character.skills.map((skill) => {
-            if (skill && skill.cooldown && skill.cooldown > 0) {
-              return { ...skill, cooldown: skill.cooldown - 1 }
-            }
-            return skill;
-          })
-        }
-      });
-      this.setState(updatedCharacterSkillState, 'UPDATE_INTERVAL_STATE');
+      if (state.characters) {
+        const updatedCharacterSkillState = state.characters.map((character) => {
+          return { 
+            ...character,
+            skills: character.skills.map((skill) => {
+              if (skill && skill.cooldown && skill.cooldown > 0) {
+                const updatedSkill = { ...skill, cooldown: skill.cooldown - 1 };
+                // console.log(updatedSkill.cooldown);
+                return updatedSkill;
+              }
+              return skill;
+            })
+          }
+        });
+        console.log(updatedCharacterSkillState);
+        this.setState(updatedCharacterSkillState, 'UPDATE_INTERVAL_STATE');
+      }
     });
   }
 
@@ -75,7 +84,12 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
       this.add(character);
     } else if (character && !character?.skills.find(characterSkill => characterSkill.name === skill.name)) {
       this.addNewSkill(skill, character);
-      this.setState({ characters: [...state.characters, character] }, 'ADD_SKILL_TO_CHARACTER');
+      const characterToReplace = state.characters.find(character => character.name === characterName);
+      if (characterToReplace) {
+        Object.assign(characterToReplace, character);
+      }
+      console.log(state.characters, character, characterToReplace);
+      this.setState({ characters: state.characters}, 'ADD_SKILL_TO_CHARACTER');
     }
   }
   
