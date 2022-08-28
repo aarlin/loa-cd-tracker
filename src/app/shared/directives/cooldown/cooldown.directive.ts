@@ -1,4 +1,5 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { getCooldownBySkillName } from '../../utils/utils';
 
 @Directive({
   selector: '[cooldown]'
@@ -38,12 +39,12 @@ export class CooldownDirective {
     
     // Get cooldown time
     const skill = target.dataset.skill;
-    let time = this.COOLDOWN_MAP.get(skill) ?? 0 - this.UPDATE_INTERVAL;
+    let time = getCooldownBySkillName(skill) * this.SECOND_IN_MS - this.UPDATE_INTERVAL;
     
     // Update remaining cooldown
     const intervalID = setInterval(() => {
       // Pass remaining time in percentage to CSS
-      const passedTime = time / (this.COOLDOWN_MAP.get(skill) ?? 0);
+      const passedTime = time / (getCooldownBySkillName(skill) * this.SECOND_IN_MS);
       target.style.filter = `grayscale(${passedTime})`;
       
       // Display time left

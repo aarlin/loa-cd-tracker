@@ -19,7 +19,7 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
       length: 0,
     };
     this.setState(initialState, 'INIT_STATE');
-    this.updateState();
+    // this.updateState();
   }
 
   updateState() {
@@ -40,7 +40,7 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
             })
           }
         });
-        console.log(updatedCharacterSkillState);
+        console.log(updatedCharacterSkillState); // TODO: why doesnt this update the state? always the same 
         this.setState(updatedCharacterSkillState, 'UPDATE_INTERVAL_STATE');
       }
     });
@@ -88,7 +88,7 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
       if (characterToReplace) {
         Object.assign(characterToReplace, character);
       }
-      console.log(state.characters, character, characterToReplace);
+      // console.log(state.characters, character, characterToReplace);
       this.setState({ characters: state.characters}, 'ADD_SKILL_TO_CHARACTER');
     }
   }
