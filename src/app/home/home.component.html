@@ -19,7 +19,7 @@
         <div *ngFor="let skill of character.skills">
           <img cooldown attr.data-skill={{skill.name}} class="tui-space_top-1 skill"
             [src]="getSkillImage(skill.id, character.className)" />
-          <div class="cooldown">22</div>
+          <div class="cooldown">{{skill.cooldown}}</div>
         </div>
 <!--         
         <div *ngFor="let skill of getSkills(character.className)">

@@ -1,17 +1,40 @@
 import { Injectable } from '@angular/core';
 import { ObservableStore } from '@codewithdan/observable-store';
-import { of } from 'rxjs';
+import { of, interval } from 'rxjs';
+import { skills } from 'src/constants/skills';
 import { CharacterItem, CharacterStoreState, Skill } from '../models/character.model';
 
 @Injectable({ providedIn: 'root' })
 export class CharacterStoreService extends ObservableStore<CharacterStoreState> {
   constructor() {
     super({ trackStateHistory: true });
+  }
+
+  setInitialState() {
     const initialState: CharacterStoreState = {
       characters: [],
       length: 0,
     };
     this.setState(initialState, 'INIT_STATE');
+    this.updateState();
+  }
+
+  updateState() {
+    const intervalUpdater = interval(1000).subscribe(event => {
+      let state = this.getState();
+      const updatedCharacterSkillState = state.characters.map((character) => {
+        return { 
+          ...character,
+          skills: character.skills.map((skill) => {
+            if (skill && skill.cooldown && skill.cooldown > 0) {
+              return { ...skill, cooldown: skill.cooldown - 1 }
+            }
+            return skill;
+          })
+        }
+      });
+      this.setState(updatedCharacterSkillState, 'UPDATE_INTERVAL_STATE');
+    });
   }
 
 
@@ -41,17 +64,16 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
   addSkillToCharacter(skill: Skill, characterName: string) {
     let state = this.getState();
     let character = state.characters.find(character => character.name === characterName);
-    if (!character && characterName === 'You') {
-      this.addSelf();
-    }
+    // if (!character && characterName === 'You') {
+    //   this.addSelf();
+    // }
     if (!character) {
       const character: CharacterItem = {
         name: characterName,
-        skills: Array(10).fill({ name: 'unknown', id: 'unknown'})
+        skills: [skill, ...Array(9).fill({ name: 'unknown', id: 'unknown'})]
       }
       this.add(character);
-    }
-    if (character && !character?.skills.find(characterSkill => characterSkill.name === skill.name)) {
+    } else if (character && !character?.skills.find(characterSkill => characterSkill.name === skill.name)) {
       this.addNewSkill(skill, character);
       this.setState({ characters: [...state.characters, character] }, 'ADD_SKILL_TO_CHARACTER');
     }
