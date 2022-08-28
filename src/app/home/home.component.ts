@@ -113,20 +113,12 @@ export class HomeComponent implements OnInit {
     return skills.find((k) => k.id == id);
   }
   
-  public menuItem() {
-    console.log('ok');
-  }
-
   public minimizeWindow() {
     this.windowMap[this.selectedWindow].minimize()
   }
 
-  public closeWindow() {
-    this.windowMap[this.selectedWindow].close()
-  }
-
-  public async startDrag() {
-    await appWindow.startDragging();
+  logEvent(event: any) {
+    console.log(event);
   }
 
 }

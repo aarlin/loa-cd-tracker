@@ -17,7 +17,7 @@
         </tui-avatar>
         <!-- <tui-avatar cooldown *ngFor="let skill of getSkills(class.key)" class="tui-space_top-1" [avatarUrl]="getSkillImage(skill.id, class.key)"></tui-avatar> -->
         <div *ngFor="let skill of character.skills">
-          <img cooldown attr.data-skill={{skill.name}} class="tui-space_top-1 skill"
+          <img cooldown attr.data-skill-name={{skill.name}} attr.data-skill-id={{skill.id}} class="tui-space_top-1 skill"
             [src]="getSkillImage(skill.id, character.className)" />
           <div class="cooldown">{{skill.cooldown}}</div>
         </div>

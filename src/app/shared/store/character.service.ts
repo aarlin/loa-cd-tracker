@@ -3,6 +3,7 @@ import { ObservableStore } from '@codewithdan/observable-store';
 import { of, interval } from 'rxjs';
 import { skills } from '../../../constants/skills';
 import { CharacterItem, CharacterStoreState, Skill } from '../models/character.model';
+import { getCooldownBySkillId } from '../utils/utils';
 
 @Injectable({ providedIn: 'root' })
 export class CharacterStoreService extends ObservableStore<CharacterStoreState> {
@@ -19,12 +20,12 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
       length: 0,
     };
     this.setState(initialState, 'INIT_STATE');
-    // this.updateState();
+    this.updateState();
+    // this.setIntervalStateChange();
   }
 
   updateState() {
     this.intervalUpdater = interval(1000).subscribe(event => {
-      // console.log(event);
       let state = this.getState();
       if (state.characters) {
         const updatedCharacterSkillState = state.characters.map((character) => {
@@ -33,17 +34,41 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
             skills: character.skills.map((skill) => {
               if (skill && skill.cooldown && skill.cooldown > 0) {
                 const updatedSkill = { ...skill, cooldown: skill.cooldown - 1 };
-                // console.log(updatedSkill.cooldown);
+                return updatedSkill;
+              } else {
+                const resetSkillCooldown = { ... skill, cooldown: getCooldownBySkillId(skill.id ?? '123')}
+                return resetSkillCooldown;
+              }
+            })
+          }
+        });
+        console.log(updatedCharacterSkillState); // TODO: why doesnt this update the state? always the same 
+        this.setState({ characters: updatedCharacterSkillState }, 'UPDATE_INTERVAL_STATE');
+      }
+    });
+  }
+
+  setIntervalStateChange() {
+    setInterval(() => {
+      let state = this.getState();
+      if (state.characters.length) {
+        const updatedCharacterSkillState = state.characters.map((character) => {
+          const updatedCharacter = { 
+            ...character,
+            skills: character.skills.map((skill) => {
+              if (skill && skill.cooldown && skill.cooldown > 0) {
+                const updatedSkill = { ...skill, cooldown: skill.cooldown - 1 };
                 return updatedSkill;
               }
               return skill;
             })
           }
+          return updatedCharacter;
         });
         console.log(updatedCharacterSkillState); // TODO: why doesnt this update the state? always the same 
-        this.setState(updatedCharacterSkillState, 'UPDATE_INTERVAL_STATE');
+        this.setState({ characters: updatedCharacterSkillState }, 'UPDATE_INTERVAL_STATE');
       }
-    });
+    }, 1000);
   }
 
 
