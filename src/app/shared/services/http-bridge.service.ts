@@ -72,7 +72,8 @@ export class HttpBridgeService {
     const skillToAdd: Skill = {
       name: skillName,
       id: skillId,
-      cooldown: getCooldownBySkillId(skillId)
+      cooldown: getCooldownBySkillId(skillId),
+      isAvailableToUse: false
     }
     // console.log(skillToAdd);
     this.facade.addSkillToCharacter(skillToAdd, characterName);

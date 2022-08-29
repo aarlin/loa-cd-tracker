@@ -32,17 +32,16 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
           return { 
             ...character,
             skills: character.skills.map((skill) => {
-              if (skill && skill.cooldown && skill.cooldown > 0) {
+              if (skill && skill.cooldown && skill.cooldown > 0 && !skill.isAvailableToUse) {
                 const updatedSkill = { ...skill, cooldown: skill.cooldown - 1 };
                 return updatedSkill;
               } else {
-                const resetSkillCooldown = { ... skill, cooldown: getCooldownBySkillId(skill.id ?? '123')}
+                const resetSkillCooldown = { ... skill, cooldown: getCooldownBySkillId(skill.id ?? '123'), isAvailableToUse: true}
                 return resetSkillCooldown;
               }
             })
           }
         });
-        console.log(updatedCharacterSkillState); // TODO: why doesnt this update the state? always the same 
         this.setState({ characters: updatedCharacterSkillState }, 'UPDATE_INTERVAL_STATE');
       }
     });
@@ -65,7 +64,6 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
           }
           return updatedCharacter;
         });
-        console.log(updatedCharacterSkillState); // TODO: why doesnt this update the state? always the same 
         this.setState({ characters: updatedCharacterSkillState }, 'UPDATE_INTERVAL_STATE');
       }
     }, 1000);
@@ -130,7 +128,6 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
 
   addNewSkill(addedSkill: Skill, character: CharacterItem): void {
     const unknownSkillIndex = character?.skills.findIndex(skill => skill.name === 'unknown');
-    console.log(unknownSkillIndex);
     if (unknownSkillIndex >= 0) {
       character?.skills.splice(unknownSkillIndex, 1);
     }
