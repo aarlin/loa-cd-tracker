@@ -1,20 +1,9 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormControl, FormGroup } from '@angular/forms';
 import { classes } from '../../constants/classes';
 import { skills } from '../../constants/skills';
-import { singleClass } from '../../constants/enabledClasses';
-import {
-  appWindow,
-  WebviewWindow,
-  LogicalSize,
-  UserAttentionType,
-  PhysicalSize,
-  PhysicalPosition
-} from '@tauri-apps/api/window';
-import { CharacterStoreService } from '../shared/store/character.service';
+import { appWindow } from '@tauri-apps/api/window';
 import { CharacterFacadeService } from '../shared/store/character-facade.service';
-import { AnyCnameRecord } from 'dns';
 import { CharacterStoreState } from '../shared/models/character.model';
 import { Observable } from 'rxjs';
 

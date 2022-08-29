@@ -9,6 +9,7 @@ export interface Skill {
     name: string;
     id?: string;
     cooldown?: number;
+    isAvailableToUse?: boolean;
 }
 
 export interface CharacterStoreState {
