@@ -2,7 +2,7 @@ export interface CharacterItem {
     name: string;
     className?: string;
     classId?: string;
-    skills: Skill[]
+    skills: Skill[];
 }
 
 export interface Skill {

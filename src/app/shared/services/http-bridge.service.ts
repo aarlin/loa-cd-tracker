@@ -26,7 +26,7 @@ export class HttpBridgeService {
 
   async setupListener() {
     await listen('message', (event) => {
-      // console.log(event); 
+      // console.log(event);
       const parsed = JSON.parse((event.payload as string).slice(1, -1));
       this.parseLog(parsed);
     });
@@ -35,7 +35,7 @@ export class HttpBridgeService {
   private parseLog(eventPayload: Payload) {
     const [messageType, messageContent] = eventPayload.message.split(':');
     switch (messageType) {
-      case MessageType.onInitEnv: 
+      case MessageType.onInitEnv:
         console.log('onInitEnv');
         this.resetState();
         break;
@@ -49,7 +49,7 @@ export class HttpBridgeService {
         break;
       default:
         break;
-    } 
+    }
   }
 
   private createNewCharacter(messageContent: string) {
@@ -57,7 +57,7 @@ export class HttpBridgeService {
 
     const characterToAdd: CharacterItem = {
       name: characterName,
-      classId: classId, 
+      classId,
       className,
       skills: Array(10).fill({ name: 'unknown', skillId: 'unknown'})
     };
@@ -68,13 +68,13 @@ export class HttpBridgeService {
   private addSkillToCharacter(messageContent: string) {
     //onSkillStart: 4AE04E7D, You, 22120, Wind's Whisper"
     const [logId, characterName, skillId, skillName] = messageContent.split(',').map((content) => content.trim());
-    console.log({logId, characterName, skillId, skillName})
+    console.log({logId, characterName, skillId, skillName});
     const skillToAdd: Skill = {
       name: skillName,
       id: skillId,
       cooldown: getCooldownBySkillId(skillId),
       isAvailableToUse: false
-    }
+    };
     // console.log(skillToAdd);
     this.facade.addSkillToCharacter(skillToAdd, characterName);
   }

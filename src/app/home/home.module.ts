@@ -11,9 +11,9 @@ import { TuiAvatarModule, TuiTagModule } from '@taiga-ui/kit';
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [CommonModule, SharedModule, 
-    HomeRoutingModule, FormsModule, 
-    ReactiveFormsModule, TuiRootModule, 
+  imports: [CommonModule, SharedModule,
+    HomeRoutingModule, FormsModule,
+    ReactiveFormsModule, TuiRootModule,
     TuiNotificationModule, TuiGroupModule,
     TuiDialogModule, TuiAvatarModule,
     TuiAlertModule, TuiTagModule,

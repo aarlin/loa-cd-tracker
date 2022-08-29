@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { appWindow } from '@tauri-apps/api/window'
+import { appWindow } from '@tauri-apps/api/window';
 
 @Component({
   selector: 'app-titlebar',
