@@ -5,14 +5,12 @@ import { getCooldownBySkillId, getCooldownBySkillName } from '../../utils/utils'
   selector: '[cooldown]'
 })
 export class CooldownDirective {
-  SECOND_IN_MS = 1000;
-  UPDATE_INTERVAL = this.SECOND_IN_MS / 60; // Update 60 times per second (60 FPS)
   SKILL_CLASS = 'skill';
   DISABLED_CLASS = 'disabled';
 
   @Input() currentCooldown: number = 0;
 
-  constructor(@Attribute('cooldown-time') public loader: string,
+  constructor(@Attribute('cooldown-time') public cooldownTime: string,
     @Attribute('onErrorSrc') public onErrorSrc: string,
     private el: ElementRef) {
   }
@@ -20,6 +18,7 @@ export class CooldownDirective {
   @HostListener('load') onLoad() {
     this.animateSkillCooldown();
   }
+
   @HostListener('error') onError() {
   }
 
@@ -28,16 +27,25 @@ export class CooldownDirective {
 
     if (!targetSkillElement.classList.contains(this.SKILL_CLASS)) return;
 
-    const skillAvailable = targetSkillElement.dataset.skillAvailable;
+    const originalSkillCooldown = getCooldownBySkillId(targetSkillElement.dataset.skillId);
+    if (originalSkillCooldown !== parseInt(targetSkillElement.dataset.cooldownTime)) {
+      // targetSkillElement.classList.remove("animate__animated", "animate__flash");
+      targetSkillElement.classList.add(this.DISABLED_CLASS);
+      return;
+    }
+      // targetSkillElement.classList.remove("animate__animated", "animate__flash");
 
-    if (skillAvailable === "true") return;
+    if (originalSkillCooldown === parseInt(targetSkillElement.dataset.cooldownTime)) {
+      targetSkillElement.style = '';
+      targetSkillElement.classList.remove(this.DISABLED_CLASS);
+      // targetSkillElement.classList.add("animate__animated", "animate__flash");
+      // setInterval(() => {
+      //   targetSkillElement.classList.remove("animate__animated", "animate__flash");
+      // }, 1000);
+      return;
+    }
 
-    targetSkillElement.classList.remove("animate__animated", "animate__flash");
-    targetSkillElement.classList.add(this.DISABLED_CLASS);
-
-    const skillId = targetSkillElement.dataset.skillId;
-
-    const originalSkillCooldown = getCooldownBySkillId(skillId);
+    // targetSkillElement.classList.remove("animate__animated", "animate__flash");
 
     const passedTime = parseInt(targetSkillElement.dataset.cooldownTime) / originalSkillCooldown * 100
     targetSkillElement.style.filter = `grayscale(${passedTime})`;
@@ -53,38 +61,32 @@ export class CooldownDirective {
     // to get the value inside grayscale, we should just calculate: current cooldown time / original time of skill cooldown 
   }
 
-  private activateSkill = (event: any) => {
-    const { target } = event;
+  // private activateSkill = (event: any) => {
+  //   const { target } = event;
 
-    // Exit if we click on anything that isn't a skill
-    if (!target.classList.contains(this.SKILL_CLASS)) return;
+  //   if (!target.classList.contains(this.SKILL_CLASS)) return;
 
-    target.classList.remove("animate__animated", "animate__flash");
-    target.classList.add(this.DISABLED_CLASS);
+  //   target.classList.remove("animate__animated", "animate__flash");
+  //   target.classList.add(this.DISABLED_CLASS);
 
-    // Get cooldown time
-    const skillId = target.dataset.skillId;
-    let time = getCooldownBySkillId(skillId) * this.SECOND_IN_MS - this.UPDATE_INTERVAL;
+  //   const skillId = target.dataset.skillId;
+  //   let time = getCooldownBySkillId(skillId) * this.SECOND_IN_MS - this.UPDATE_INTERVAL;
 
-    // Update remaining cooldown
-    const intervalID = setInterval(() => {
-      // Pass remaining time in percentage to CSS
-      const passedTime = time / (getCooldownBySkillId(skillId) * this.SECOND_IN_MS);
-      target.style.filter = `grayscale(${passedTime})`;
+  //   const intervalID = setInterval(() => {
+  //     const passedTime = time / (getCooldownBySkillId(skillId) * this.SECOND_IN_MS);
+  //     target.style.filter = `grayscale(${passedTime})`;
 
-      // Display time left
-      target.textContent = (time / this.SECOND_IN_MS).toFixed(2);
-      time -= this.UPDATE_INTERVAL;
+  //     target.textContent = (time / this.SECOND_IN_MS).toFixed(2);
+  //     time -= this.UPDATE_INTERVAL;
 
-      // Stop timer when there is no time left
-      if (time < 0) {
-        target.textContent = '';
-        target.style = '';
-        target.classList.remove(this.DISABLED_CLASS);
-        target.classList.add("animate__animated", "animate__flash");
+  //     if (time < 0) {
+  //       target.textContent = '';
+  //       target.style = '';
+  //       target.classList.remove(this.DISABLED_CLASS);
+  //       target.classList.add("animate__animated", "animate__flash");
 
-        clearInterval(intervalID);
-      }
-    }, this.UPDATE_INTERVAL);
-  }
+  //       clearInterval(intervalID);
+  //     }
+  //   }, this.UPDATE_INTERVAL);
+  // }
 }

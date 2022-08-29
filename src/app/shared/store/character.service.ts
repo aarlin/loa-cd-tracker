@@ -29,14 +29,14 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
       let state = this.getState();
       if (state.characters) {
         const updatedCharacterSkillState = state.characters.map((character) => {
-          return { 
+          return {
             ...character,
             skills: character.skills.map((skill) => {
               if (skill && skill.cooldown && skill.cooldown > 0 && !skill.isAvailableToUse) {
                 const updatedSkill = { ...skill, cooldown: skill.cooldown - 1 };
                 return updatedSkill;
               } else {
-                const resetSkillCooldown = { ... skill, cooldown: getCooldownBySkillId(skill.id ?? '123'), isAvailableToUse: true}
+                const resetSkillCooldown = { ...skill, cooldown: getCooldownBySkillId(skill.id ?? '123'), isAvailableToUse: true }
                 return resetSkillCooldown;
               }
             })
@@ -47,27 +47,27 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
     });
   }
 
-  setIntervalStateChange() {
-    setInterval(() => {
-      let state = this.getState();
-      if (state.characters.length) {
-        const updatedCharacterSkillState = state.characters.map((character) => {
-          const updatedCharacter = { 
-            ...character,
-            skills: character.skills.map((skill) => {
-              if (skill && skill.cooldown && skill.cooldown > 0) {
-                const updatedSkill = { ...skill, cooldown: skill.cooldown - 1 };
-                return updatedSkill;
-              }
-              return skill;
-            })
-          }
-          return updatedCharacter;
-        });
-        this.setState({ characters: updatedCharacterSkillState }, 'UPDATE_INTERVAL_STATE');
-      }
-    }, 1000);
-  }
+  // setIntervalStateChange() {
+  //   setInterval(() => {
+  //     let state = this.getState();
+  //     if (state.characters.length) {
+  //       const updatedCharacterSkillState = state.characters.map((character) => {
+  //         const updatedCharacter = { 
+  //           ...character,
+  //           skills: character.skills.map((skill) => {
+  //             if (skill && skill.cooldown && skill.cooldown > 0) {
+  //               const updatedSkill = { ...skill, cooldown: skill.cooldown - 1 };
+  //               return updatedSkill;
+  //             }
+  //             return skill;
+  //           })
+  //         }
+  //         return updatedCharacter;
+  //       });
+  //       this.setState({ characters: updatedCharacterSkillState }, 'UPDATE_INTERVAL_STATE');
+  //     }
+  //   }, 1000);
+  // }
 
 
   // One time action, no need to subscribe
@@ -102,26 +102,41 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
     if (!character) {
       const character: CharacterItem = {
         name: characterName,
-        skills: [skill, ...Array(9).fill({ name: 'unknown', id: 'unknown'})]
+        skills: [skill, ...Array(9).fill({ name: 'unknown', id: 'unknown' })]
       }
       this.add(character);
-    } else if (character && !character?.skills.find(characterSkill => characterSkill.name === skill.name)) {
+    } else if (character && !character.skills.find(characterSkill => characterSkill.name === skill.name)) {
       this.addNewSkill(skill, character);
       const characterToReplace = state.characters.find(character => character.name === characterName);
       if (characterToReplace) {
         Object.assign(characterToReplace, character);
       }
       // console.log(state.characters, character, characterToReplace);
-      this.setState({ characters: state.characters}, 'ADD_SKILL_TO_CHARACTER');
+      this.setState({ characters: state.characters }, 'ADD_SKILL_TO_CHARACTER');
+    } else if (character && character.skills.find(characterSkill => characterSkill.name === skill.name)) {
+      // set isAvailableToUse to false for skill
+      const updatedCharacterSkills = character.skills.map(characterSkill => {
+        if (characterSkill.name === skill.name) {
+          return { ...characterSkill, isAvailableToUse: false };
+        }
+        return characterSkill; 
+      });
+      const characterToReplace = state.characters.find(character => character.name === characterName);
+      if (characterToReplace) {
+        characterToReplace.skills = updatedCharacterSkills;
+        Object.assign(characterToReplace, character);
+      } 
+      this.setState({ characters: state.characters }, 'SKILL_USED');
     }
   }
-  
+
+
   addSelf() {
     const self: CharacterItem = {
       name: 'You',
       classId: '302',
       className: 'Wardancer',
-      skills: Array(10).fill({ name: 'unknown', skill: 'unknown'}),
+      skills: Array(10).fill({ name: 'unknown', skill: 'unknown' }),
     }
     this.add(self);
   }
