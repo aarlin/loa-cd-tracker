@@ -3,7 +3,7 @@ import { ObservableStore } from '@codewithdan/observable-store';
 import { of, interval } from 'rxjs';
 import { skills } from '../../../constants/skills';
 import { CharacterItem, CharacterStoreState, Skill } from '../models/character.model';
-import { getCooldownBySkillId } from '../utils/utils';
+import { getClassBySkillId, getCooldownBySkillId } from '../utils/utils';
 
 @Injectable({ providedIn: 'root' })
 export class CharacterStoreService extends ObservableStore<CharacterStoreState> {
@@ -99,6 +99,7 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
     // }
     if (!character) {
       const character: CharacterItem = {
+        className: getClassBySkillId(skill.id ?? '123'),
         name: characterName,
         skills: [skill, ...Array(9).fill({ name: 'unknown', id: 'unknown' })]
       };
