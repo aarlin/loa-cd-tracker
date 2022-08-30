@@ -1042,6 +1042,7 @@ export const skills = [
         name: 'Elemental Wings',
         class: 'Summoner',
         level: 0,
+        cooldown: 10
     },
     {
         id: 20170,

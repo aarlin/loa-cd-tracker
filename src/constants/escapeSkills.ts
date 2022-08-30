@@ -81,6 +81,13 @@ export const escapeSkills: { [x: string]: any; } = {
     ],
     'Summoner': [
         {
+            id: 20210,
+            name: 'Elemental Wings',
+            class: 'Summoner',
+            level: 0,
+            cooldown: 10
+        },
+        {
             id: 20215,
             name: 'Stand Up',
             class: 'Summoner',
@@ -154,19 +161,19 @@ export const escapeSkills: { [x: string]: any; } = {
     ],
     'Soulfist': [
         {
-            id: 24155,
-            name: 'Stand Up',
-            class: 'Soulfist',
-            level: 0,
-            cooldown: 30
-        },
-        {
             id: 24150,
             name: 'Nebulous Step',
             class: 'Soulfist',
             level: 0,
             cooldown: 9
         },
+        {
+            id: 24155,
+            name: 'Stand Up',
+            class: 'Soulfist',
+            level: 0,
+            cooldown: 30
+        }
     ],
     'Glaivier': [
         {
