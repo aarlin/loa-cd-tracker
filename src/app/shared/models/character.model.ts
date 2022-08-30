@@ -2,14 +2,20 @@ export interface CharacterItem {
     name: string;
     className?: string;
     classId?: string;
-    skills: Skill[]
+    skills: Skill[];
 }
 
 export interface Skill {
-    name: string;
-    id?: string;
+    id: string | number;
+    name?: string;
     cooldown?: number;
+    class?: string;
+    level?: number
     isAvailableToUse?: boolean;
+}
+
+export interface Buff extends Skill {
+    duration?: number;
 }
 
 export interface CharacterStoreState {

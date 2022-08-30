@@ -8,7 +8,7 @@ export class CooldownDirective {
   SKILL_CLASS = 'skill';
   DISABLED_CLASS = 'disabled';
 
-  @Input() currentCooldown: number = 0;
+  @Input() currentCooldown = 0;
 
   constructor(@Attribute('cooldown-time') public cooldownTime: string,
     @Attribute('onErrorSrc') public onErrorSrc: string,
@@ -25,12 +25,15 @@ export class CooldownDirective {
   private animateSkillCooldown() {
     const targetSkillElement = this.el.nativeElement;
 
-    if (!targetSkillElement.classList.contains(this.SKILL_CLASS)) return;
+    if (!targetSkillElement.classList.contains(this.SKILL_CLASS)) {return;}
 
     const originalSkillCooldown = getCooldownBySkillId(targetSkillElement.dataset.skillId);
     if (originalSkillCooldown !== parseInt(targetSkillElement.dataset.cooldownTime)) {
       // targetSkillElement.classList.remove("animate__animated", "animate__flash");
       targetSkillElement.classList.add(this.DISABLED_CLASS);
+
+      const passedTime = parseInt(targetSkillElement.dataset.cooldownTime) / originalSkillCooldown * 100;
+      targetSkillElement.style.filter = `grayscale(${passedTime})`;
       return;
     }
       // targetSkillElement.classList.remove("animate__animated", "animate__flash");
@@ -47,8 +50,8 @@ export class CooldownDirective {
 
     // targetSkillElement.classList.remove("animate__animated", "animate__flash");
 
-    const passedTime = parseInt(targetSkillElement.dataset.cooldownTime) / originalSkillCooldown * 100
-    targetSkillElement.style.filter = `grayscale(${passedTime})`;
+    // const passedTime = parseInt(targetSkillElement.dataset.cooldownTime) / originalSkillCooldown * 100;
+    // targetSkillElement.style.filter = `grayscale(${passedTime})`;
 
     // grayscale(1) -> fully grayscaled
     // grayscale(0) -> regular color
@@ -58,7 +61,7 @@ export class CooldownDirective {
     // so 9/10 -> .9
     // 8/10 -> .8
     // we are slowly reaching 0 which means it available
-    // to get the value inside grayscale, we should just calculate: current cooldown time / original time of skill cooldown 
+    // to get the value inside grayscale, we should just calculate: current cooldown time / original time of skill cooldown
   }
 
   // private activateSkill = (event: any) => {
