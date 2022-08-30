@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { ObservableStore } from '@codewithdan/observable-store';
 import { of, interval } from 'rxjs';
-import { escapeSkills } from 'src/constants/escapeSkills';
+import { escapeSkills } from '../../../constants/escapeSkills';
 import { skills } from '../../../constants/skills';
 import { CharacterItem, CharacterStoreState, Skill } from '../models/character.model';
-import { getClassBySkillId, getCooldownBySkillId } from '../utils/utils';
+import { getClassBySkillId, getCooldownBySkillId, populateInitialCharacterSkills } from '../utils/utils';
 
 @Injectable({ providedIn: 'root' })
 export class CharacterStoreService extends ObservableStore<CharacterStoreState> {
@@ -101,12 +101,22 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
 
     if (!character) {
       const className = getClassBySkillId(skill.id ?? '123');
-      const character: CharacterItem = {
-        className,
-        name: characterName,
-        skills: [skill, ...Array(9).fill({ name: 'unknown', id: 'unknown' })]
-      };
-      this.add(character);
+      const indexOfEscapeSkills = escapeSkills[className].findIndex((escapeSkill: any) => escapeSkill.name === skill.name) >= 0;
+      if (skill?.name && indexOfEscapeSkills) {
+        const character: CharacterItem = {
+          className,
+          name: characterName,
+          skills: populateInitialCharacterSkills(className)
+        };
+        this.add(character);
+      } else {
+        const character: CharacterItem = {
+          className,
+          name: characterName,
+          skills: [...escapeSkills[className], skill, ...Array(7).fill({ name: 'unknown', id: 'unknown' })]
+        };
+        this.add(character);
+      }
     } else if (character && !character.skills.find(characterSkill => characterSkill.name === skill.name)) {
       this.addNewSkill(skill, character);
       const characterToReplace = state.characters.find(character => character.name === characterName);
