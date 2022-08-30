@@ -130,6 +130,7 @@ export const skills = [
         name: 'Tumbling',
         class: 'Berserker',
         level: 0,
+        cooldown: 7
     },
     {
         id: 16140,
@@ -160,6 +161,7 @@ export const skills = [
         name: 'Stand Up',
         class: 'Berserker',
         level: 0,
+        cooldown: 30
     },
     {
         id: 16046,
@@ -263,6 +265,7 @@ export const skills = [
         name: 'Run',
         class: 'Destroyer',
         level: 0,
+        cooldown: 8
     },
     {
         id: 18080,
@@ -359,6 +362,7 @@ export const skills = [
         name: 'Stand Up',
         class: 'Destroyer',
         level: 0,
+        cooldown: 30
     },
     {
         id: 18026,
@@ -437,6 +441,7 @@ export const skills = [
         name: 'Back Step',
         class: 'Gunlancer',
         level: 0,
+        cooldown: 5
     },
     {
         id: 17180,
@@ -491,6 +496,7 @@ export const skills = [
         name: 'Stand Up',
         class: 'Gunlancer',
         level: 0,
+        cooldown: 30
     },
     {
         id: 17026,
@@ -713,6 +719,7 @@ export const skills = [
         name: 'Stand Up',
         class: 'Paladin',
         level: 0,
+        cooldown: 30
     },
     {
         id: 36026,
@@ -725,6 +732,7 @@ export const skills = [
         name: 'Sprint',
         class: 'Paladin',
         level: 0,
+        cooldown: 8
     },
     {
         id: 19030,
@@ -935,18 +943,21 @@ export const skills = [
         name: 'Stand Up',
         class: 'Arcana',
         level: 0,
+        cooldown: 30
     },
     {
         id: 19106,
         name: 'Stand Up',
         class: 'Arcana',
         level: 0,
+        cooldown: 30
     },
     {
         id: 19100,
         name: 'Vanish',
         class: 'Arcana',
         level: 0,
+        cooldown: 9
     },
     {
         id: 19310,
@@ -1121,12 +1132,14 @@ export const skills = [
         name: 'Stand Up',
         class: 'Summoner',
         level: 0,
+        cooldown: 30
     },
     {
         id: 20216,
         name: 'Stand Up',
         class: 'Summoner',
         level: 0,
+        cooldown: 30
     },
     {
         id: 20125,
@@ -1331,18 +1344,21 @@ export const skills = [
         name: 'Sound Illusion',
         class: 'Bard',
         level: 0,
+        cooldown: 10
     },
     {
         id: 21215,
         name: 'Stand Up',
         class: 'Bard',
         level: 0,
+        cooldown: 30
     },
     {
         id: 21216,
         name: 'Stand Up',
         class: 'Bard',
         level: 0,
+        cooldown: 30
     },
     {
         id: 21180,
@@ -1428,18 +1444,21 @@ export const skills = [
         name: 'Phase Leap',
         class: 'Sorceress',
         level: 0,
+        cooldown: 8
     },
     {
         id: 37030,
         name: 'Stand Up',
         class: 'Sorceress',
         level: 0,
+        cooldown: 30
     },
     {
         id: 37040,
         name: 'Stand Up',
         class: 'Sorceress',
         level: 0,
+        cooldown: 30
     },
     {
         id: 37200,
@@ -1847,24 +1866,28 @@ export const skills = [
         name: 'Duck',
         class: 'Scrapper',
         level: 0,
+        cooldown: 5
     },
     {
         id: 23172,
         name: 'Duck',
         class: 'Scrapper',
         level: 0,
+        cooldown: 5
     },
     {
         id: 23175,
         name: 'Stand Up',
         class: 'Scrapper',
         level: 0,
+        cooldown: 30
     },
     {
         id: 23176,
         name: 'Stand Up',
         class: 'Scrapper',
         level: 0,
+        cooldown: 30
     },
     {
         id: 23220,
@@ -1961,6 +1984,7 @@ export const skills = [
         name: 'Nebulous Step',
         class: 'Soulfist',
         level: 0,
+        cooldown: 9
     },
     {
         id: 24170,
@@ -1991,12 +2015,14 @@ export const skills = [
         name: 'Stand Up',
         class: 'Soulfist',
         level: 0,
+        cooldown: 30
     },
     {
         id: 24156,
         name: 'Stand Up',
         class: 'Soulfist',
         level: 0,
+        cooldown: 30
     },
     {
         id: 24220,
@@ -2099,18 +2125,21 @@ export const skills = [
         name: 'Mirage Dash',
         class: 'Glavier',
         level: 0,
+        cooldown: 6
     },
     {
         id: 34030,
         name: 'Stand Up',
         class: 'Glavier',
         level: 0,
+        cooldown: 30
     },
     {
         id: 34031,
         name: 'Stand Up',
         class: 'Glavier',
         level: 0,
+        cooldown: 30
     },
     {
         id: 34040,
@@ -2485,18 +2514,21 @@ export const skills = [
         name: 'Stand Up',
         class: 'Shadowhunter',
         level: 0,
+        cooldown: 30
     },
     {
         id: 27026,
         name: 'Stand Up',
         class: 'Shadowhunter',
         level: 0,
+        cooldown: 30
     },
     {
         id: 27870,
         name: 'Stand Up',
         class: 'Shadowhunter',
         level: 0,
+        cooldown: 30
     },
     {
         id: 27030,
@@ -2683,6 +2715,7 @@ export const skills = [
         name: 'Shadow Step',
         class: 'Reaper',
         level: 0,
+        cooldown: 7
     },
     {
         id: 26500,
@@ -2695,6 +2728,7 @@ export const skills = [
         name: 'Stand Up',
         class: 'Reaper',
         level: 0,
+        cooldown: 30
     },
     {
         id: 26031,
@@ -2899,6 +2933,7 @@ export const skills = [
         name: 'Slide',
         class: 'Sharpshooter',
         level: 0,
+        cooldown: 9
     },
     {
         id: 28159,
@@ -3055,6 +3090,7 @@ export const skills = [
         name: 'Stand Up',
         class: 'Sharpshooter',
         level: 0,
+        cooldown: 30
     },
     {
         id: 28240,
@@ -3151,6 +3187,7 @@ export const skills = [
         name: 'Tumbling',
         class: 'Deadeye',
         level: 0,
+        cooldown: 8
     },
     {
         id: 29170,
@@ -3175,6 +3212,7 @@ export const skills = [
         name: 'Stand Up',
         class: 'Deadeye',
         level: 0,
+        cooldown: 30
     },
     {
         id: 29210,
@@ -3391,12 +3429,14 @@ export const skills = [
         name: 'Roll',
         class: 'Artillerist',
         level: 0,
+        cooldown: 10
     },
     {
         id: 30155,
         name: 'Stand Up',
         class: 'Artillerist',
         level: 0,
+        cooldown: 30
     },
     {
         id: 30260,
@@ -3691,12 +3731,14 @@ export const skills = [
         name: 'Thruster Move',
         class: 'Scouter',
         level: 0,
+        cooldown: 7
     },
     {
         id: 35740,
         name: 'Stand Up',
         class: 'Scouter',
         level: 0,
+        cooldown: 30
     },
     {
         id: 35750,
@@ -3877,12 +3919,14 @@ export const skills = [
         name: 'Stampede',
         class: 'Gunslinger',
         level: 0,
+        cooldown: 8
     },
     {
         id: 38155,
         name: 'Stand Up',
         class: 'Gunslinger',
         level: 0,
+        cooldown: 30
     },
     {
         id: 38020,
@@ -4024,6 +4068,7 @@ export const skills = [
         name: 'Charging Steps',
         class: 'Striker',
         level: 0,
+        cooldown: 6
     },
     {
         id: 39190,
@@ -4043,12 +4088,14 @@ export const skills = [
         name: 'Stand Up',
         class: 'Striker',
         level: 0,
+        cooldown: 30
     },
     {
         id: 39156,
         name: 'Stand Up',
         class: 'Striker',
         level: 0,
+        cooldown: 30
     },
     {
         id: 39280,

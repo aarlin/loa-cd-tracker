@@ -4,7 +4,7 @@ import { emit, listen } from '@tauri-apps/api/event';
 import { CharacterFacadeService } from '../store/character-facade.service';
 import { message } from '@tauri-apps/api/dialog';
 import { CharacterItem, Skill } from '../models/character.model';
-import { getCooldownBySkillName, getCooldownBySkillId } from '../utils/utils';
+import { getCooldownBySkillName, getCooldownBySkillId, populateInitialCharacterSkills } from '../utils/utils';
 
 interface Payload {
   type: string;
@@ -59,7 +59,7 @@ export class HttpBridgeService {
       name: characterName,
       classId,
       className,
-      skills: Array(10).fill({ name: 'unknown', skillId: 'unknown'})
+      skills: populateInitialCharacterSkills(className)
     };
 
     this.facade.addCharacter(characterToAdd);

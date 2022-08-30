@@ -6,9 +6,11 @@ export interface CharacterItem {
 }
 
 export interface Skill {
-    name: string;
-    id?: string;
+    id: string | number;
+    name?: string;
     cooldown?: number;
+    class?: string;
+    level?: number
     isAvailableToUse?: boolean;
 }
 

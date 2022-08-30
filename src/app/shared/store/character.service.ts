@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ObservableStore } from '@codewithdan/observable-store';
 import { of, interval } from 'rxjs';
+import { escapeSkills } from 'src/constants/escapeSkills';
 import { skills } from '../../../constants/skills';
 import { CharacterItem, CharacterStoreState, Skill } from '../models/character.model';
 import { getClassBySkillId, getCooldownBySkillId } from '../utils/utils';
@@ -94,12 +95,14 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
   addSkillToCharacter(skill: Skill, characterName: string) {
     const state = this.getState();
     const character = state.characters.find(character => character.name === characterName);
-    // if (!character && characterName === 'You') {
-    //   this.addSelf();
-    // }
+
+    // TODO: if auto attack, ignore
+
+
     if (!character) {
+      const className = getClassBySkillId(skill.id ?? '123');
       const character: CharacterItem = {
-        className: getClassBySkillId(skill.id ?? '123'),
+        className,
         name: characterName,
         skills: [skill, ...Array(9).fill({ name: 'unknown', id: 'unknown' })]
       };
@@ -110,10 +113,8 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
       if (characterToReplace) {
         Object.assign(characterToReplace, character);
       }
-      // console.log(state.characters, character, characterToReplace);
       this.setState({ characters: state.characters }, 'ADD_SKILL_TO_CHARACTER');
     } else if (character && character.skills.find(characterSkill => characterSkill.name === skill.name)) {
-      // set isAvailableToUse to false for skill
       const updatedCharacterSkills = character.skills.map(characterSkill => {
         if (characterSkill.name === skill.name) {
           return { ...characterSkill, isAvailableToUse: false };
@@ -127,17 +128,6 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
       }
       this.setState({ characters: state.characters }, 'SKILL_USED');
     }
-  }
-
-
-  addSelf() {
-    const self: CharacterItem = {
-      name: 'You',
-      classId: '302',
-      className: 'Wardancer',
-      skills: Array(10).fill({ name: 'unknown', skill: 'unknown' }),
-    };
-    this.add(self);
   }
 
   addNewSkill(addedSkill: Skill, character: CharacterItem): void {
