@@ -14,6 +14,10 @@ export interface Skill {
     isAvailableToUse?: boolean;
 }
 
+export interface Buff extends Skill {
+    duration?: number;
+}
+
 export interface CharacterStoreState {
     characters: CharacterItem[];
     length: number;

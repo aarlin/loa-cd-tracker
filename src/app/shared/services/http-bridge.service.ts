@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Command } from '@tauri-apps/api/shell';
-import { emit, listen } from '@tauri-apps/api/event';
+import { listen } from '@tauri-apps/api/event';
 import { CharacterFacadeService } from '../store/character-facade.service';
 import { message } from '@tauri-apps/api/dialog';
 import { CharacterItem, Skill } from '../models/character.model';
@@ -12,9 +11,10 @@ interface Payload {
 }
 
 enum MessageType {
-  onInitEnv = 'onInitEnv',
-  onNewPc = 'onNewPc',
-  onSkillStart = 'onSkillStart'
+  ON_INIT_ENV = 'onInitEnv',
+  ON_NEW_PC = 'onNewPc',
+  ON_SKILL_START = 'onSkillStart',
+  ON_BUFF = 'onBuff'
 }
 
 @Injectable({
@@ -35,17 +35,21 @@ export class HttpBridgeService {
   private parseLog(eventPayload: Payload) {
     const [messageType, messageContent] = eventPayload.message.split(':');
     switch (messageType) {
-      case MessageType.onInitEnv:
+      case MessageType.ON_INIT_ENV:
         console.log('onInitEnv');
         this.resetState();
         break;
-      case MessageType.onNewPc:
+      case MessageType.ON_NEW_PC:
         console.log('onNewPc');
         this.createNewCharacter(messageContent);
         break;
-      case MessageType.onSkillStart:
+      case MessageType.ON_SKILL_START:
         console.log('onSkillStart');
         this.addSkillToCharacter(messageContent);
+        break;
+      case MessageType.ON_BUFF:
+        console.log('onBuff');
+        this.trackBuff(messageContent);
         break;
       default:
         break;
@@ -77,6 +81,13 @@ export class HttpBridgeService {
     };
     // console.log(skillToAdd);
     this.facade.addSkillToCharacter(skillToAdd, characterName);
+  }
+
+  private trackBuff(messageContent: string) {
+    const [logId, characterName, buffId, buffName, sourceId, sourceName, shieldAmount] = messageContent.split(',').map((content) => content.trim());
+    console.log({ logId, characterName, buffId, buffName, sourceId, sourceName, shieldAmount});
+
+    // TODO: call facade to track buff
   }
 
   private resetState() {

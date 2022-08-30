@@ -103,6 +103,7 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
       const className = getClassBySkillId(skill.id ?? '123');
       const indexOfEscapeSkills = escapeSkills[className].findIndex((escapeSkill: any) => escapeSkill.name === skill.name) >= 0;
       if (skill?.name && indexOfEscapeSkills) {
+        // TODO: set isAvailableToUse on skill inside here as false
         const character: CharacterItem = {
           className,
           name: characterName,

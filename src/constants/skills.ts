@@ -2237,6 +2237,7 @@ export const skills = [
         name: 'Breakthrough',
         class: 'Glaivier',
         level: 0,
+        cooldown: 6
     },
     {
         id: 34540,

@@ -2,7 +2,6 @@ const http = require('http');
 const EventEmitter = require('events');
 const { spawn } = require('child_process');
 const fs = require('fs');
-// import log from "electron-log";
 const path = require('path');
 
 const httpServerEventEmitter = new EventEmitter();
