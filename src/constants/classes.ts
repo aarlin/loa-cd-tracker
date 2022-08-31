@@ -1,5 +1,5 @@
 export const classes = {
-    Arcana: { color: '#b38915', defaultColor: '#b38915' },
+    Arcanist: { color: '#b38915', defaultColor: '#b38915' },
     Artillerist: { color: '#33670b', defaultColor: '#33670b' },
     Assassin: { color: '#3752d8', defaultColor: '#3752d8' },
     Bard: { color: '#674598', defaultColor: '#674598' },

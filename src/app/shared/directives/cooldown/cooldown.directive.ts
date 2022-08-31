@@ -1,5 +1,5 @@
 import { Attribute, Directive, ElementRef, HostListener, Input } from '@angular/core';
-import { getCooldownBySkillId, getCooldownBySkillName } from '../../utils/utils';
+import { getCooldownBySkillId } from '../../utils/utils';
 
 @Directive({
   selector: '[cooldown]'
@@ -35,7 +35,6 @@ export class CooldownDirective {
       targetSkillElement.style.filter = `grayscale(${passedTime})`;
       return;
     }
-    // targetSkillElement.classList.remove("animate__animated", "animate__flash");
 
     if (originalSkillCooldown === parseInt(targetSkillElement.dataset.cooldownTime)) {
       targetSkillElement.style = '';

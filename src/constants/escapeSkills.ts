@@ -67,14 +67,14 @@ export const escapeSkills: { [x: string]: any } = {
         {
             id: 19100,
             name: 'Vanish',
-            class: 'Arcana',
+            class: 'Arcanist',
             level: 0,
             cooldown: 9
         },
         {
             id: 19105,
             name: 'Stand Up',
-            class: 'Arcana',
+            class: 'Arcanist',
             level: 0,
             cooldown: 30
         },

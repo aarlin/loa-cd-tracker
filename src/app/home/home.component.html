@@ -1,7 +1,7 @@
 <div data-tauri-drag-region class="container tui-container tui-container_adaptive">
   <div data-tauri-drag-region class="tui-row tui-row_adaptive titlebar">
     <div class="titlebar-window-name titlebar tui-col_xs-11 tui-col_md-2">
-      <div data-tauri-drag-region>{{selectedWindowTitle | uppercase}} COOLDOWN TRACKER</div>
+      <div data-tauri-drag-region>{{selectedWindow | uppercase}} COOLDOWN TRACKER</div>
     </div>
     <div class="tui-row_align_end tui-col_xs-1">
         <tui-svg tuiHintId="love" tuiHintMode="onDark" tuiHintDirection="top-middle"
@@ -15,27 +15,16 @@
         <tui-avatar tabindex="0" text={{character.className}} class="tui-space_top-1" [autoColor]="true"
           [avatarUrl]="getClassAvatar(character.className)">
         </tui-avatar>
-        <!-- <tui-avatar cooldown *ngFor="let skill of getSkills(class.key)" class="tui-space_top-1" [avatarUrl]="getSkillImage(skill.id, class.key)"></tui-avatar> -->
         <div *ngFor="let skill of character.skills">
           <img cooldown attr.data-skill-available={{skill.isOnCooldown}} attr.data-cooldown-time={{skill.cooldown}} attr.data-skill-name={{skill.name}} attr.data-skill-id={{skill.id}} class="tui-space_top-1 skill"
             [src]="getSkillImage(skill.id, character.className)" />
           <div class="cooldown" *ngIf="skill.cooldown > 0">{{skill.cooldown}}</div>
         </div>
-<!--         
-        <div *ngFor="let skill of getSkills(character.className)">
-          <img cooldown attr.data-skill={{skill.name}} class="tui-space_top-1 skill"
-            [src]="getSkillImage(skill.id, character.className)" />
-          <div class="cooldown">22</div>
-        </div> -->
-                  
-       
-  
       </div>
     </ng-container>
 
     <ng-template #noSession>
       <div> No active session or characters</div>
     </ng-template>
-
   </div>
 </div>
