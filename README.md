@@ -1,21 +1,20 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/29287377/170220154-a521b32b-6727-422b-bf69-01b4faaa31da.png" />
+  <img src="https://user-images.githubusercontent.com/5667435/187566448-92afef6a-0a07-4d7f-be14-f1523095c573.png" />
+  <p align="center">Realtime Cooldown Tracker tool for Lost Ark</p>
 
   <br />
   <br />
 
-  <a href="https://github.com/karaeren/loa-details/releases/latest">
+  <!-- <a href="https://github.com/karaeren/loa-details/releases/latest">
     <img src="https://img.shields.io/github/downloads/karaeren/loa-details/total?style=for-the-badge" />
-  </a>
+  </a> -->
 
   <br />
 
-  <img src="https://img.shields.io/github/package-json/v/karaeren/loa-details?style=flat-square" />
+  <!-- <img src="https://img.shields.io/github/package-json/v/karaeren/loa-details?style=flat-square" /> -->
 </p>
 
-<p align="center">Realtime Cooldown Tracker tool for Lost Ark</p>
-
-![small](https://user-images.githubusercontent.com/29287377/173195460-cf8da1b4-abfa-4ed3-8dec-648eb1ffaf87.png)
+![small](https://user-images.githubusercontent.com/5667435/187566044-e150408b-4d5d-4bec-b8b8-211f1dfaf1d1.png)
 
 <hr />
 
