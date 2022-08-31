@@ -14,9 +14,7 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
   tag = 'hello';
-
   selectedWindow = appWindow.label;
-  selectedWindowTitle = appWindow.title;
   windowMap = {
     [appWindow.label]: appWindow
   };
@@ -27,10 +25,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('HomeComponent INIT');
-    console.log(this.selectedWindowTitle);
     this.facadeService.getCharacters().subscribe(state => {
       if (state) {
-        this.characters = state.characters;
+        if (this.selectedWindow === 'main') {
+          this.characters = state.characters.slice(0, 3);
+        } else if (this.selectedWindow === 'enemy') {
+          this.characters = state.characters.slice(3, 6);
+        }
         this.cdr.detectChanges();
       }
     });
@@ -75,8 +76,9 @@ export class HomeComponent implements OnInit {
   }
 
   public skillHasIcon(s: any) {
-    if (s.name.startsWith('Basic Attack') || s?.display?.startsWith('Basic Attack') || !(s?.icon ?? true))
-      {return false;}
+    if (s.name.startsWith('Basic Attack') || s?.display?.startsWith('Basic Attack') || !(s?.icon ?? true)) {
+      return false;
+    }
     return true;
   }
 

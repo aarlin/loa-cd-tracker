@@ -21,7 +21,7 @@ export const populateInitialCharacterSkills = (className?: string, classId?: str
     // TODO: trigger which skill was activated using isAvailableToUse
     //
     if (className && className in escapeSkills) {
-        return [ ...escapeSkills[className], ...Array(8).fill({ name: 'unknown', skill: 'unknown' })];
+        return [ ...escapeSkills[className], ...Array(9).fill({ name: 'unknown', skill: 'unknown' })];
     }
     return Array(10).fill({ name: 'unknown', skill: 'unknown' });
 };

@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "angular-tauri",
+    "productName": "loa-cd-tracker",
     "version": "1.0.0"
   },
   "build": {
@@ -53,7 +53,7 @@
     "windows": [
       {
         "title": "Team Cooldown",
-        "width": 610,
+        "width": 640,
         "height": 250,
         "resizable": false,
         "fullscreen": false,
@@ -64,7 +64,7 @@
       {
         "label": "enemy",
         "title": "Enemy Cooldown",
-        "width": 610,
+        "width": 640,
         "height": 250,
         "resizable": false,
         "fullscreen": false,
