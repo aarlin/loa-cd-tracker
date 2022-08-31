@@ -25,7 +25,6 @@ export class AppComponent {
       console.log('Run in browser');
     }
 
-    // console.log('setupBridge')
     this.httpBridgeService.setupListener();
   }
 }

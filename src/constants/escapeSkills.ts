@@ -1,5 +1,5 @@
-export const escapeSkills: { [x: string]: any; } = {
-    'Berserker': [
+export const escapeSkills: { [x: string]: any } = {
+    Berserker: [
         {
             id: 16040,
             name: 'Tumbling',
@@ -15,7 +15,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Destroyer': [
+    Destroyer: [
         {
             id: 18020,
             name: 'Run',
@@ -31,7 +31,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Gunlancer': [
+    Gunlancer: [
         {
             id: 17020,
             name: 'Back Step',
@@ -47,7 +47,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Paladin': [
+    Paladin: [
         {
             id: 36020,
             name: 'Sprint',
@@ -63,7 +63,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Arcanist': [
+    Arcanist: [
         {
             id: 19100,
             name: 'Vanish',
@@ -79,7 +79,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Summoner': [
+    Summoner: [
         {
             id: 20210,
             name: 'Elemental Wings',
@@ -95,7 +95,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Bard': [
+    Bard: [
         {
             id: 21100,
             name: 'Sound Illusion',
@@ -111,7 +111,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Sorceress': [
+    Sorceress: [
         {
             id: 37020,
             name: 'Phase Leap',
@@ -127,7 +127,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Wardancer': [
+    Wardancer: [
         {
             id: 22150,
             name: 'Charging Steps',
@@ -143,7 +143,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Scrapper': [
+    Scrapper: [
         {
             id: 23171,
             name: 'Duck',
@@ -159,7 +159,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Soulfist': [
+    Soulfist: [
         {
             id: 24150,
             name: 'Nebulous Step',
@@ -175,7 +175,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         }
     ],
-    'Glaivier': [
+    Glaivier: [
         {
             id: 34020,
             name: 'Mirage Dash',
@@ -190,7 +190,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Striker': [
+    Striker: [
         {
             id: 39150,
             name: 'Charging Steps',
@@ -206,7 +206,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Deathblade': [
+    Deathblade: [
         {
             id: 25020,
             name: 'High-Speed Move',
@@ -222,7 +222,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Shadowhunter': [
+    Shadowhunter: [
         {
             id: 27020,
             name: 'Rush',
@@ -238,7 +238,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Reaper': [
+    Reaper: [
         {
             id: 26020,
             name: 'Shadow Step',
@@ -254,7 +254,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Sharpshooter': [
+    Sharpshooter: [
         {
             id: 28015,
             name: 'Slide',
@@ -270,7 +270,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Deadeye': [
+    Deadeye: [
         {
             id: 29150,
             name: 'Tumbling',
@@ -286,7 +286,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Artillerist': [
+    Artillerist: [
         {
             id: 30015,
             name: 'Roll',
@@ -302,7 +302,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Machinist': [
+    Machinist: [
         {
             id: 35730,
             name: 'Thruster Move',
@@ -318,7 +318,7 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Gunslinger': [
+    Gunslinger: [
         {
             id: 38150,
             name: 'Stampede',
@@ -334,8 +334,8 @@ export const escapeSkills: { [x: string]: any; } = {
             cooldown: 30
         },
     ],
-    'Artist': [
+    Artist: [
 
     ],
 
-}
+};

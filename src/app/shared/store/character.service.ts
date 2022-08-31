@@ -32,11 +32,11 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
         const updatedCharacterSkillState = state.characters.map((character) => ({
             ...character,
             skills: character.skills.map((skill) => {
-              if (skill && skill.cooldown && skill.cooldown > 0 && !skill.isAvailableToUse) {
+              if (skill && skill.cooldown && skill.cooldown > 0 && skill.isOnCooldown) {
                 const updatedSkill = { ...skill, cooldown: skill.cooldown - 1 };
                 return updatedSkill;
               } else {
-                const resetSkillCooldown = { ...skill, cooldown: getCooldownBySkillId(skill.id ?? '123'), isAvailableToUse: true };
+                const resetSkillCooldown = { ...skill, cooldown: getCooldownBySkillId(skill.id ?? '123'), isOnCooldown: false };
                 return resetSkillCooldown;
               }
             })
@@ -103,7 +103,7 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
       const className = getClassBySkillId(skill.id ?? '123');
       const indexOfEscapeSkills = escapeSkills[className].findIndex((escapeSkill: any) => escapeSkill.name === skill.name) >= 0;
       if (skill?.name && indexOfEscapeSkills) {
-        // TODO: set isAvailableToUse on skill inside here as false
+        // TODO: set isOnCooldown on skill inside here as true
         const character: CharacterItem = {
           className,
           name: characterName,
@@ -128,7 +128,7 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
     } else if (character && character.skills.find(characterSkill => characterSkill.name === skill.name)) {
       const updatedCharacterSkills = character.skills.map(characterSkill => {
         if (characterSkill.name === skill.name) {
-          return { ...characterSkill, isAvailableToUse: false };
+          return { ...characterSkill, isOnCooldown: true };
         }
         return characterSkill;
       });
@@ -146,7 +146,7 @@ export class CharacterStoreService extends ObservableStore<CharacterStoreState> 
     if (unknownSkillIndex >= 0) {
       character?.skills.splice(unknownSkillIndex, 1);
     }
-    character?.skills.unshift(addedSkill);
+    character?.skills.push(addedSkill);
   }
 
   resetState() {

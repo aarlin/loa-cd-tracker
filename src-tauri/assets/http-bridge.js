@@ -25,7 +25,6 @@ function setupBridge(appSettings) {
     }
 
     if (req.method === "POST") {
-      // Handle data
       let body = [];
 
       req.on("data", (chunk) => {
@@ -99,35 +98,6 @@ function spawnPacketCapturer(appSettings, serverPort) {
 
     console.info("Exiting app...");
   });
-
-  // packetCapturerProcess.stdout.on('data', function (data) {
-  //   console.log("IM HERE stdout on data");
-  //   console.log('data' + data);
-  // });
-  // packetCapturerProcess.stderr.on('data', function (data) {
-  //   console.log("IM HERE stderr on data");
-  //   console.log('test: ' + data);
-  //   console.error(data);
-  // });
-  // packetCapturerProcess.on('close', function (code) {
-  //   console.log("IM HERE on close");
-  //   console.log("close");
-  // });
-  // packetCapturerProcess.on('error', function (err) {
-  //   console.log("IM HERE on error");
-  //   console.log(err);
-  // });
-  // packetCapturerProcess.stderr.on('error', function (err) {
-  //   console.log("IM HERE");
-  //   console.log("my Erorr");
-  //   process.stderr.emit('error', err);
-  // });
-
-  // packetCapturerProcess.stdout.on('data', function (buf) {
-  //   console.log("IM HERE");
-  //   console.log('buf receive');
-  //   console.log(buf.toString());
-  // });
 }
 
 module.exports = {
