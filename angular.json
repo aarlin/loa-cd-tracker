@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-tauri": {
+    "loa-cd-tracker": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -86,10 +86,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-tauri:build:production"
+              "browserTarget": "loa-cd-tracker:build:production"
             },
             "development": {
-              "browserTarget": "angular-tauri:build:development"
+              "browserTarget": "loa-cd-tracker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -97,7 +97,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-tauri:build"
+            "browserTarget": "loa-cd-tracker:build"
           }
         },
         "test": {
@@ -130,5 +130,5 @@
       }
     }
   },
-  "defaultProject": "angular-tauri"
+  "defaultProject": "loa-cd-tracker"
 }
