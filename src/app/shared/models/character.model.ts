@@ -10,8 +10,8 @@ export interface Skill {
     name?: string;
     cooldown?: number;
     class?: string;
-    level?: number
-    isAvailableToUse?: boolean;
+    level?: number;
+    isOnCooldown?: boolean;
 }
 
 export interface Buff extends Skill {

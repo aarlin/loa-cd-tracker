@@ -26,7 +26,6 @@ export class HttpBridgeService {
 
   async setupListener() {
     await listen('message', (event) => {
-      // console.log(event);
       const parsed = JSON.parse((event.payload as string).slice(1, -1));
       this.parseLog(parsed);
     });
@@ -70,16 +69,14 @@ export class HttpBridgeService {
   }
 
   private addSkillToCharacter(messageContent: string) {
-    //onSkillStart: 4AE04E7D, You, 22120, Wind's Whisper"
     const [logId, characterName, skillId, skillName] = messageContent.split(',').map((content) => content.trim());
     console.log({logId, characterName, skillId, skillName});
     const skillToAdd: Skill = {
       name: skillName,
       id: skillId,
       cooldown: getCooldownBySkillId(skillId),
-      isAvailableToUse: false
+      isOnCooldown: true
     };
-    // console.log(skillToAdd);
     this.facade.addSkillToCharacter(skillToAdd, characterName);
   }
 

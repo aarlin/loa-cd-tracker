@@ -25,7 +25,6 @@ function setupListeners() {
 
     httpServerEventEmitter.on("packet", (value) => {
         logParser.parseLogLine(value);
-        // console.log("Packet received: ", value);
     });
 
     httpServerEventEmitter.on("debug", (data) => {
