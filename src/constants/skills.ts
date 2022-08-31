@@ -836,245 +836,229 @@ export const skills = [
         name: 'Evoke',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 19090,
         name: 'Ghost',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19300,
         name: 'Evoke',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 19092,
         name: 'Moon',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19290,
         name: 'Evoke',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 19040,
         name: 'Checkmate',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 19098,
         name: 'Judgment',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19050,
         name: 'Dark Resurrection',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 27
     },
     {
         id: 19093,
         name: 'Corrosion',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19094,
         name: 'Star',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19150,
         name: 'Stream of Edge',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 19095,
         name: 'Wheel of Fortune',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19140,
         name: 'Celestial Rain',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 9
     },
     {
         id: 19096,
         name: 'Royal',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19160,
         name: 'Four of a Kind',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19097,
         name: 'Three-Headed Snake',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19120,
         name: 'Unlimited Shuffle',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 19170,
         name: 'Quadra Accelerate',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 19281,
         name: 'Cull',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19099,
         name: 'Balance',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19180,
         name: 'Call of Destiny',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 19200,
         name: 'Dancing of Spineflower',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 19280,
         name: 'Mayhem',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19091,
         name: 'Twisted Fate',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19282,
         name: 'Emperor',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19190,
         name: 'Spiral Edge',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 19195,
         name: 'Spiral Edge',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 19283,
         name: 'Empress',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
     },
     {
         id: 19260,
         name: 'Return',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 19110,
         name: 'Prismatic Mirror',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 19210,
         name: 'Mysterious Stampede',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 19215,
         name: 'Mysterious Stampede',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 19230,
         name: 'Infinity Shower',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 19240,
         name: 'Serendipity',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 19105,
         name: 'Stand Up',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1082,7 +1066,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1090,7 +1073,6 @@ export const skills = [
         name: 'Vanish',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
         cooldown: 9
     },
     {
@@ -1098,98 +1080,94 @@ export const skills = [
         name: 'Secret Garden',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 19320,
         name: 'Scratch Dealer',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 10
     },
     {
         id: 19330,
         name: 'Deathbound',
         class: 'Arcanist',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 20291,
         name: 'Kelsion',
         class: 'Summoner',
         level: 0,
-        cooldown: 
     },
     {
         id: 20292,
         name: 'Kelsion',
         class: 'Summoner',
         level: 0,
-        cooldown: 
     },
     {
         id: 20293,
         name: 'Kelsion',
         class: 'Summoner',
         level: 0,
-        cooldown: 
     },
     {
         id: 20020,
         name: 'Crystalline Magick',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 6
     },
     {
         id: 20030,
         name: 'Steed Charge',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 20180,
         name: 'Sticky Moss Swamp',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 20040,
         name: 'Reine\'s Protection',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 40
     },
     {
         id: 20050,
         name: 'Flash Explosion',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 7
     },
     {
         id: 20051,
         name: 'Flash Explosion',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 6
     },
     {
         id: 20060,
         name: 'Fleeting Gale Bird',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 20210,
         name: 'Elemental Wings',
         class: 'Summoner',
         level: 0,
-        cooldown: 
         cooldown: 10
     },
     {
@@ -1197,105 +1175,104 @@ export const skills = [
         name: 'Osh',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 1
     },
     {
         id: 20070,
         name: 'Alimaji',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 1
     },
     {
         id: 20080,
         name: 'Jahia & Ligheas',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 1
     },
     {
         id: 20200,
         name: 'Released Will',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 20220,
         name: 'Winged Spirit',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 20230,
         name: 'Electricity Release',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 20231,
         name: 'Electricity Release',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 20240,
         name: 'Earth Collapse',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 20250,
         name: 'Water Elemental',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 20260,
         name: 'Ancient Spear',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 30
     },
     {
         id: 20270,
         name: 'Electric Storm',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 20280,
         name: 'Phoenix',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 1
     },
     {
         id: 20290,
         name: 'Kelsion',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 20160,
         name: 'Shurdi',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 30
     },
     {
         id: 20215,
         name: 'Stand Up',
         class: 'Summoner',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1303,7 +1280,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Summoner',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1311,238 +1287,236 @@ export const skills = [
         name: 'Pauru - Self-Destruct',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 3
     },
     {
         id: 20335,
         name: 'Pauru - Self-Destruct',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 3
     },
     {
         id: 20137,
         name: 'Maririn - Taunt',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 20138,
         name: 'Maririn - Charge',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 20139,
         name: 'Maririn - Stagger',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 20294,
         name: 'Kelsion - Thunderstroke',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 20120,
         name: 'Pauru - Flame Breath',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 20300,
         name: 'Bagron\'s Wrath',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 20310,
         name: 'Akir',
         class: 'Summoner',
         level: 0,
-        cooldown: 
     },
     {
         id: 20090,
         name: 'Elcid',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 20110,
         name: 'Pauru',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 30
     },
     {
         id: 20330,
         name: 'Pauru - Flame Breath',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 20130,
         name: 'Maririn',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 45
     },
     {
         id: 20347,
         name: 'Maririn - Taunt',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 20348,
         name: 'Maririn - Charge',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 20349,
         name: 'Maririn - Stagger',
         class: 'Summoner',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 21020,
         name: 'Sound Shock',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 6
     },
     {
         id: 21040,
         name: 'Conviction Core',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 21050,
         name: 'Sound Wave',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 21060,
         name: 'Dissonance',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 21070,
         name: 'Wind of Music',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 21079,
         name: 'Wind of Music',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 21080,
         name: 'Prelude of Storm',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 21090,
         name: 'Stigma',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 21150,
         name: 'Rhythm Buckshot',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 21110,
         name: 'Note Bundle',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 21120,
         name: 'Soundholic',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 21160,
         name: 'Heavenly Tune',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 30
     },
     {
         id: 21170,
         name: 'Sonic Vibration',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 21130,
         name: 'Serenade of Salvation',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 25
     },
     {
         id: 21131,
         name: 'Serenade of Salvation',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 25
     },
     {
         id: 21132,
         name: 'Serenade of Salvation',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 25
     },
     {
         id: 21133,
         name: 'Serenade of Salvation',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 25
     },
     {
         id: 21100,
         name: 'Sound Illusion',
         class: 'Bard',
         level: 0,
-        cooldown: 
         cooldown: 10
     },
     {
@@ -1550,7 +1524,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Bard',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1558,7 +1531,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Bard',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1566,77 +1538,77 @@ export const skills = [
         name: 'Harp of Rhythm',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 21140,
         name: 'Serenade of Courage',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 25
     },
     {
         id: 21141,
         name: 'Serenade of Courage',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 25
     },
     {
         id: 21142,
         name: 'Serenade of Courage',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 25
     },
     {
         id: 21143,
         name: 'Serenade of Courage',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 25
     },
     {
         id: 21240,
         name: 'Prelude of Death',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 21250,
         name: 'Guardian Tune',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 30
     },
     {
         id: 21260,
         name: 'Rhapsody of Light',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 21230,
         name: 'Symphonia',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 21270,
         name: 'March',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 21280,
         name: 'Oratorio',
         class: 'Bard',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 37000,
@@ -1644,21 +1616,18 @@ export const skills = [
         display: 'Basic Attack',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
     },
     {
         id: 37010,
         name: '[소서리스] 맨손 평타',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
     },
     {
         id: 37020,
         name: 'Phase Leap',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
         cooldown: 8
     },
     {
@@ -1666,7 +1635,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1674,7 +1642,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1682,182 +1649,181 @@ export const skills = [
         name: 'Blaze',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 10
     },
     {
         id: 37230,
         name: 'Inferno',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 37330,
         name: 'Explosion',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 28
     },
     {
         id: 37350,
         name: 'Doomsday',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 32
     },
     {
         id: 37220,
         name: 'Ice Shower',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 11
     },
     {
         id: 37250,
         name: 'Rime Arrow',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 22
     },
     {
         id: 37340,
         name: 'Frost\'s Call',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 37341,
         name: 'Frost\'s Call',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 37290,
         name: 'Elegian\'s Touch',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 40
     },
     {
         id: 37291,
         name: 'Elegian\'s Touch',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 40
     },
     {
         id: 37320,
         name: 'Seraphic Hail',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 37210,
         name: 'Lightning Vortex',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 37211,
         name: '[소서리스][라이트닝 볼텍스][7번] 체인 스킬',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 37300,
         name: 'Lightning Bolt',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 37270,
         name: 'Punishing Strike',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 28
     },
     {
         id: 37240,
         name: 'Energy Discharge',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 6
     },
     {
         id: 37280,
         name: 'Reverse Gravity',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 37310,
         name: 'Squall',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 37260,
         name: 'Esoteric Reaction',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 37100,
         name: 'Arcane Rupture',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 2
     },
     {
         id: 37101,
         name: 'Arcane Rupture',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 2
     },
     {
         id: 37102,
         name: '[소서리스][아이덴티티티] 마력 방출 (z 스킬 off)',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 2
     },
     {
         id: 37110,
         name: 'Blink',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 1
     },
     {
         id: 37360,
         name: 'Enviska\'s Might',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 37370,
         name: 'Apocalypse Call',
         class: 'Sorceress',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 22100,
         name: 'Esoteric Skill: Lightning Strike',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 14
     },
     {
@@ -1865,7 +1831,6 @@ export const skills = [
         name: 'Esoteric Skill: Blast Formation',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 20
     },
     {
@@ -1873,7 +1838,6 @@ export const skills = [
         name: 'Sweeping Hidden Dragon',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 16
     },
     {
@@ -1881,7 +1845,6 @@ export const skills = [
         name: 'Flash Heat Fang',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 14
     },
     {
@@ -1889,7 +1852,6 @@ export const skills = [
         name: 'Roar of Courage',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 25
     },
     {
@@ -1897,7 +1859,6 @@ export const skills = [
         name: 'Esoteric Skill: Rising Fire Dragon',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 16
     },
     {
@@ -1905,7 +1866,6 @@ export const skills = [
         name: 'Triple Fist',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 6
     },
     {
@@ -1913,7 +1873,6 @@ export const skills = [
         name: 'Wind\'s Whisper',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1921,7 +1880,6 @@ export const skills = [
         name: 'Esoteric Skill: Call of the Wind God',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 16
     },
     {
@@ -1929,7 +1887,6 @@ export const skills = [
         name: 'Seismic Strike',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 16
     },
     {
@@ -1937,7 +1894,6 @@ export const skills = [
         name: 'Esoteric Skill: Spiral Impact',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 8
     },
     {
@@ -1945,7 +1901,6 @@ export const skills = [
         name: 'Phoenix Advent',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 18
     },
     {
@@ -1953,7 +1908,6 @@ export const skills = [
         name: 'Sky Shattering Blow',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 8
     },
     {
@@ -1961,7 +1915,6 @@ export const skills = [
         name: 'Charging Steps',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 6
     },
     {
@@ -1969,7 +1922,6 @@ export const skills = [
         name: 'Moon Flash Kick',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 22
     },
     {
@@ -1977,7 +1929,6 @@ export const skills = [
         name: 'Lightning Kick',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 9
     },
     {
@@ -1985,7 +1936,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -1993,7 +1943,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2001,7 +1950,6 @@ export const skills = [
         name: 'Swift Wind Kick',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 20
     },
     {
@@ -2009,7 +1957,6 @@ export const skills = [
         name: 'Energy Combustion',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 36
     },
     {
@@ -2017,7 +1964,6 @@ export const skills = [
         name: 'Ultimate Skill: Flash Rage Blow',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 300
     },
     {
@@ -2025,7 +1971,6 @@ export const skills = [
         name: 'Sweeping Kick',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 25
     },
     {
@@ -2033,7 +1978,6 @@ export const skills = [
         name: 'Ultimate Skill: Fist of Dominance',
         class: 'Wardancer',
         level: 0,
-        cooldown: 
         cooldown: 300
     },
     {
@@ -2041,112 +1985,111 @@ export const skills = [
         name: 'Charging Blow',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 5
     },
     {
         id: 23080,
         name: 'Chain of Resonance',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 15
     },
     {
         id: 23090,
         name: 'Crushing Smite',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 23100,
         name: 'Chain Destruction Fist',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 30
     },
     {
         id: 23050,
         name: 'Dragon Advent',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 23210,
         name: 'Critical Blow',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 23070,
         name: 'Earthquake Chain',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 23060,
         name: 'Judgment',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 6
     },
     {
         id: 23110,
         name: 'Death Rattle',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 23130,
         name: 'Supernova',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 30
     },
     {
         id: 23160,
         name: 'Roundup Sweep',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 23150,
         name: 'Instant Hit',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 23180,
         name: 'Fierce Tiger Strike',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 23200,
         name: 'Continuous Push',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 23170,
         name: 'Duck',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 5
     },
     {
         id: 23171,
         name: 'Duck',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
         cooldown: 5
     },
     {
@@ -2154,7 +2097,6 @@ export const skills = [
         name: 'Duck',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
         cooldown: 5
     },
     {
@@ -2162,7 +2104,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2170,7 +2111,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2178,112 +2118,111 @@ export const skills = [
         name: 'Battering Fists',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 23230,
         name: 'Iron Cannon Blow',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 23240,
         name: 'True Rising Fist',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 23250,
         name: 'Undefeated Dragon King',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 23260,
         name: 'Shredding Strike',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 23270,
         name: 'Mysterious Art: Blast of Ruination',
         class: 'Scrapper',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 24090,
         name: 'Energy Bullet',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 24040,
         name: 'Energy Blast',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 30
     },
     {
         id: 24050,
         name: 'World Decimation',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 24070,
         name: 'Venomous Fist',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 24080,
         name: 'Lightning Palm',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 24210,
         name: 'Merciless Pummel',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 24110,
         name: 'Palm Burst',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 24120,
         name: 'Heavenly Squash',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 20 
     },
     {
         id: 24140,
         name: 'Crippling Barrier',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 24150,
         name: 'Nebulous Step',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
         cooldown: 9
     },
     {
@@ -2291,35 +2230,34 @@ export const skills = [
         name: 'Magnetic Palm',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 24180,
         name: 'Pulverizing Palm',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 9
     },
     {
         id: 24190,
         name: 'Tempest Blast',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 24200,
         name: 'Shadowbreaker',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 24155,
         name: 'Stand Up',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2327,7 +2265,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2335,111 +2272,108 @@ export const skills = [
         name: 'Bolting Crash',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 24230,
         name: 'Force Orb',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 18 
     },
     {
         id: 24240,
         name: 'Flash Step',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 24241,
         name: 'Flash Step',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 24242,
         name: 'Flash Step',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 24250,
         name: 'Energy Release',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 30
     },
     {
         id: 24020,
         name: 'Hype',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
     },
     {
         id: 24021,
         name: 'Level 2 Hype',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
     },
     {
         id: 24022,
         name: 'Level 3 Hype',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
     },
     {
         id: 24023,
         name: 'Level 3 Hype',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
     },
     {
         id: 24260,
         name: 'Deadly Finger',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 24270,
         name: 'Decimation Ray',
         class: 'Soulfist',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 34500,
         name: 'Flurry Stance',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 1
     },
     {
         id: 34501,
         name: 'Flurry Stance',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 1
     },
     {
         id: 34000,
         name: 'Focus Stance',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 1
     },
     {
         id: 34001,
         name: 'Focus Stance',
         class: 'Glaivier',
         level: 0,
+        cooldown: 1
     },
     {
         id: 34020,
@@ -2467,112 +2401,111 @@ export const skills = [
         name: 'Double Strike',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 6
     },
     {
         id: 34050,
         name: 'Windsplitter',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 34060,
         name: 'Stampeding Slash',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 10
     },
     {
         id: 34061,
         name: 'Stampeding Slash',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 10
     },
     {
         id: 34070,
         name: 'Wheel of Blades',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 34080,
         name: 'Flash Kick',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 34090,
-        name: 'Vault',
+        name: 'Thorn Jab',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 10
     },
     {
         id: 34100,
         name: 'Blue Dragon\'s Claw',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 34110,
         name: 'Half Moon Slash',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 34120,
         name: 'Chain Slash',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 10
     },
     {
         id: 34130,
         name: 'Cutting Wind',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 34150,
         name: 'Raging Dragon Slash',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 34140,
         name: 'Soul Cutter',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 15
     },
     {
         id: 34160,
         name: 'Spear Dive',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 34170,
         name: 'Shackling Blue Dragon',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 34520,
         name: 'Breakthrough',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
         cooldown: 6
     },
     {
@@ -2580,63 +2513,62 @@ export const skills = [
         name: 'Spiraling Spear',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 5
     },
     {
         id: 34550,
         name: '4-Headed Dragon',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 34560,
         name: 'Thrust of Destruction',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 34570,
         name: 'Starfall Pounce',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 34580,
         name: 'Dragonscale Defense',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 34590,
         name: 'Red Dragon\'s Horn',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 34600,
         name: 'Yeon-Style Spear Technique: Spear Meteor',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 34610,
         name: 'Yeon-Style Spear Technique: Storming Red Dragon',
         class: 'Glaivier',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 25040,
         name: 'Surprise Attack',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 5
     },
     {
@@ -2644,7 +2576,6 @@ export const skills = [
         name: 'Upper Slash',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 8
     },
     {
@@ -2652,7 +2583,6 @@ export const skills = [
         name: 'Blade Dance',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 18
     },
     {
@@ -2660,7 +2590,6 @@ export const skills = [
         name: 'Earth Cleaver',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 16
     },
     {
@@ -2668,7 +2597,6 @@ export const skills = [
         name: 'Death Sentence',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 18
     },
     {
@@ -2676,7 +2604,6 @@ export const skills = [
         name: 'Twin Shadows',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 12
     },
     {
@@ -2684,7 +2611,6 @@ export const skills = [
         name: 'Twin Shadows',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 12
     },
     {
@@ -2692,7 +2618,6 @@ export const skills = [
         name: 'Wind Cut',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 10
     },
     {
@@ -2700,7 +2625,6 @@ export const skills = [
         name: 'Soul Absorber',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 24
     },
     {
@@ -2708,7 +2632,6 @@ export const skills = [
         name: 'Spincutter',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 12
     },
     {
@@ -2716,7 +2639,6 @@ export const skills = [
         name: 'Turning Slash',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 15
     },
     {
@@ -2724,7 +2646,6 @@ export const skills = [
         name: 'Moonlight Sonic',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 27
     },
     {
@@ -2732,7 +2653,6 @@ export const skills = [
         name: 'Dark Axel',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 12
     },
     {
@@ -2740,7 +2660,6 @@ export const skills = [
         name: 'Maelstrom',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2748,7 +2667,6 @@ export const skills = [
         name: 'Polestar',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 12
     },
     {
@@ -2756,7 +2674,6 @@ export const skills = [
         name: 'Void Strike',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 27
     },
     {
@@ -2764,7 +2681,6 @@ export const skills = [
         name: 'Fatal Wave',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 18
     },
     {
@@ -2772,7 +2688,6 @@ export const skills = [
         name: 'Blitz Rush',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 24
     },
     {
@@ -2780,7 +2695,6 @@ export const skills = [
         name: 'Head Hunt',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 18
     },
     {
@@ -2788,7 +2702,6 @@ export const skills = [
         name: 'Flash Blink',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 300
     },
     {
@@ -2796,7 +2709,6 @@ export const skills = [
         name: 'Blade Assault',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 300
     },
     {
@@ -2804,7 +2716,6 @@ export const skills = [
         name: 'Death Trance',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 1
     },
     {
@@ -2812,7 +2723,6 @@ export const skills = [
         name: 'Death Trance',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 1
     },
     {
@@ -2820,7 +2730,6 @@ export const skills = [
         name: 'Death Trance',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 1
     },
     {
@@ -2829,7 +2738,6 @@ export const skills = [
         display: 'Surge',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 1
     },
     {
@@ -2837,7 +2745,6 @@ export const skills = [
         name: 'Level 2',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 1
     },
     {
@@ -2845,7 +2752,6 @@ export const skills = [
         name: 'Level 3',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 1
     },
     {
@@ -2853,7 +2759,6 @@ export const skills = [
         name: 'Zero',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 1
     },
     {
@@ -2861,7 +2766,6 @@ export const skills = [
         name: 'High-Speed Move',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 6
     },
     {
@@ -2869,7 +2773,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Deathblade',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2877,7 +2780,6 @@ export const skills = [
         name: 'Rush',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
         cooldown: 9
     },
     {
@@ -2885,14 +2787,12 @@ export const skills = [
         name: 'Basic Attack',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
     },
     {
         id: 27025,
         name: 'Stand Up',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2900,7 +2800,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2908,7 +2807,6 @@ export const skills = [
         name: 'Stand Up',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -2916,217 +2814,214 @@ export const skills = [
         name: 'Demonize',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
     },
     {
         id: 27032,
         name: 'Cancel Demonization',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
     },
     {
         id: 27035,
         name: 'Gate of Eruption',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 27050,
         name: 'Demonic Slash',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 10
     },
     {
         id: 27051,
         name: 'Demonic Slash',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 10
     },
     {
         id: 27060,
         name: 'Nimble Cut',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 6
     },
     {
         id: 27070,
         name: 'Slasher',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 27080,
         name: 'Brutal Cross',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 10
     },
     {
         id: 27130,
         name: 'Grind Chain',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 27140,
         name: 'Spinning Dive',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 27250,
         name: 'Sharpened Cut',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 27180,
         name: 'Cruel Cutter',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 27200,
         name: 'Thrust Impact',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 27220,
         name: 'Demolition',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 16
     },
     {
         id: 27090,
         name: 'Demon\'s Grip',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 27100,
         name: 'Rising Claw',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 27110,
         name: 'Piercing Thorn',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 27120,
         name: 'Demon Vision',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 27170,
         name: 'Howl',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 27801,
         name: 'Rift Walk',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 7
     },
     {
         id: 27810,
         name: 'Ruining Rush',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 6
     },
     {
         id: 27820,
         name: 'Death Claw',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 4
     },
     {
         id: 27830,
         name: 'Gore Bleeding',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 6
     },
     {
         id: 27840,
         name: 'Destruction',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 27850,
         name: 'Leaping Blow',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 18
     },
     {
         id: 27860,
         name: 'Blood Massacre',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 27890,
         name: 'Fallen Ruin',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 300
     },
     {
         id: 27230,
         name: 'Spinning Weapon',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 24
     },
     {
         id: 27240,
         name: 'Decimate',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 27
     },
     {
         id: 27210,
         name: 'Demonic Clone',
         class: 'Shadowhunter',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 26020,
         name: 'Shadow Step',
         class: 'Reaper',
         level: 0,
-        cooldown: 
         cooldown: 7
     },
     {
@@ -3134,14 +3029,12 @@ export const skills = [
         name: '',
         class: 'Reaper',
         level: 0,
-        cooldown: 
     },
     {
         id: 26030,
         name: 'Stand Up',
         class: 'Reaper',
         level: 0,
-        cooldown: 
         cooldown: 30
     },
     {
@@ -3149,105 +3042,103 @@ export const skills = [
         name: '[리퍼] [PVP][기상액션]',
         class: 'Reaper',
         level: 0,
-        cooldown: 
     },
     {
         id: 26040,
         name: 'Persona',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 0.5
     },
     {
         id: 26050,
         name: 'Spinning Dagger',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 26060,
         name: 'Spirit Catch',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 8
     },
     {
         id: 26070,
         name: 'Shadow Dot',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 7
     },
     {
         id: 26090,
         name: 'Nightmare',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 26100,
         name: 'Nightmare',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 26130,
         name: 'Nightmare',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 26080,
         name: 'Iblisto',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 26110,
         name: 'Saber Stinger',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 14
     },
     {
         id: 26120,
         name: 'Death Side',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 26510,
         name: 'Distortion',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 12
     },
     {
         id: 26520,
         name: 'Blink',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 26530,
         name: 'Blink',
         class: 'Reaper',
         level: 0,
-        cooldown: 
+        cooldown: 20
     },
     {
         id: 26540,
         name: '[리퍼][그림자] 블링크 소환수 명령 - 단검공격',
         class: 'Reaper',
         level: 0,
-        cooldown: 
     },
     {
         id: 26610,
