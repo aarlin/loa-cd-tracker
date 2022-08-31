@@ -5,9 +5,9 @@
   <br />
   <br />
 
-  <!-- <a href="https://github.com/karaeren/loa-details/releases/latest">
-    <img src="https://img.shields.io/github/downloads/karaeren/loa-details/total?style=for-the-badge" />
-  </a> -->
+  <a href="https://github.com/karaeren/loa-cd-tracker/releases/latest">
+    <img src="https://img.shields.io/github/downloads/aarlin/loa-cd-tracker/total?style=for-the-badge" />
+  </a>
 
   <br />
 
@@ -53,15 +53,19 @@ npm install
 npm install -g @angular/cli
 ```
 
-## To build for development
-
-- **in a terminal window** -> **Run as Administrator**
+## Run locally for development
 
 1. Download and replace `dps.exe` inside `src-tauri/assets` from [LostArkLogger releases](https://github.com/shalzuth/LostArkLogger/releases) if outdated  
-2. Open up terminal as admin   
-3. Open up Lost Ark  
+2. Open up Lost Ark  
+
+3. **Open up a terminal window** -> **Run as Administrator**
 4. `npm run tauri:serve`  
-  
+
+## Installing release build
+
+1. Go through the installer after running .exe build file
+2. Run application installed **as administrator**
+ 
 ## Project structure
 
 | Folder    | Description                                   |
