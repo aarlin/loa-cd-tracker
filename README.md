@@ -5,9 +5,9 @@
   <br />
   <br />
 
-  <a href="https://github.com/karaeren/loa-cd-tracker/releases/latest">
+  <!-- <a href="https://github.com/karaeren/loa-cd-tracker/releases/latest">
     <img src="https://img.shields.io/github/downloads/aarlin/loa-cd-tracker/total?style=for-the-badge" />
-  </a>
+  </a> -->
 
   <br />
 
@@ -87,11 +87,12 @@ npm install -g @angular/cli
 
 [![Angular Logo](https://www.vectorlogo.zone/logos/angular/angular-icon.svg)](https://angular.io/) <img src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/tauri.svg" width="50">
 
-- Angular v13.2.4
+- Angular v14.1.2
 - Tauri 1.0.4
 
 ## Features To Add
 
 - Transformation skill set swap
+- Stance skill set swap
 - Apply cooldown multiplier from swiftness stat
 - Remove auto attacks
