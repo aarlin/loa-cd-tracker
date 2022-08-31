@@ -63,8 +63,7 @@ npm install -g @angular/cli
 
 ## Installing release build
 
-1. Go through the installer after running .exe build file
-2. Run application installed **as administrator**
+Release build is currently buggy, use local build steps above
  
 ## Project structure
 
