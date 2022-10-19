@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/5667435/187566448-92afef6a-0a07-4d7f-be14-f1523095c573.png" />
+  <img src="https://user-images.githubusercontent.com/5667435/196708684-059f2ac3-5ed5-4c78-bea9-5d708b931e1e.svg" />
   <p align="center">Realtime Cooldown Tracker tool for Lost Ark</p>
 
   <br />
