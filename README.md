@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/assets/loa-cd-tracker.svg">
+  <img src="https://github.com/aarlin/loa-cd-tracker/assets/5667435/326aaa78-eb10-4c6c-a469-7d231a71f300">
   <p align="center">Realtime Cooldown Tracker tool for Lost Ark</p>
 </p>
 
